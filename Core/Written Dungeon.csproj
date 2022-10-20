@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>writtendungonicon.ico</ApplicationIcon>
+    <Authors>petrosik</Authors>
+    <Company>none</Company>
+    <FileVersion>0.3.0</FileVersion>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageIcon>writtendungonicon.png</PackageIcon>
+    <Description>Text Base dungeon crawler </Description>
+    <Title>Written Dungeon</Title>
+    <Version>0.3.0</Version>
+    <Copyright>petrosik©</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NováSložka\**" />
+    <EmbeddedResource Remove="NováSložka\**" />
+    <None Remove="NováSložka\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Settings1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Settings1.settings" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="writtendungonicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Pictures\writtendungonicon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
