@@ -43,6 +43,7 @@ bool turn = false;
 bool _event = false;
 bool shop = false;
 bool boss = false;
+bool reward = false;
 int eventid = 0;
 int cellmin = 9;
 int cellmax = 30;
@@ -96,6 +97,8 @@ int[,] spenemystats = new int[5, 5] { { 150, 30, 5, 250, 20 }, { 500, 25, 30, 75
 // current battle state or for save
 // id ,health, strg, crit chance, gold, exp, applied special effect(poison, etc)
 int[,] battlelog = new int[4, 7];
+
+string[,] names = new string[2, 16] { { "Empty", "Slime", "Skeleton", "Spawner", "Troll", "Tree", "Golem", "", "", "", "", "Mimic", "Boss", "", "", "" }, { "", "Living blob of slime", "Pile of bones that became alive", "Spawner can spawn upto 4 random mobs", "Trolls are usually under bridges idk what he's doing here", "Tree!", "Golems are bulky but can hit like a truck", "", "", "", "", "", "", "", "", "" } };
 
 //1, id, dmg, crit chance, special effect id
 int[] weaponpreset = new int[] { 1, 1, 1, 1, 1 };
@@ -343,6 +346,8 @@ while (true)
                     break;
                 case ConsoleKey.Enter:
                     break;
+                default:
+                    break;
 
             }
 
@@ -397,6 +402,8 @@ while (true)
                         break;
                     case ConsoleKey.Enter:
                         break;
+                    default:
+                        break;
                 }
             }
 
@@ -443,6 +450,8 @@ while (true)
                         Console.Clear();
                         //load = true;
                         chosg = 2;
+                        break;
+                    default:
                         break;
                 }
 
@@ -505,6 +514,8 @@ while (true)
                         //load = true;
                         chosg = 2;
                         break;
+                    default:
+                        break;
                 }
 
                 if (chosg == 1) // save selected 2 (loading)
@@ -564,6 +575,8 @@ while (true)
                         //load = true;
                         chosg = 2;
                         break;
+                    default:
+                        break;
                 }
 
                 if (chosg == 1) // save selected 3 (loading)
@@ -610,7 +623,7 @@ while (true)
     while (load)
     {
         Console.Clear();
-        Console.WriteLine("\n\r                                                    Save Slot " + saveloaded + "\n\r ");
+        Console.WriteLine($"\n\r                                                    Save Slot {saveloaded}\n\r ");
 
         var filestream = new System.IO.FileStream(tempfilepath,
                                                   System.IO.FileMode.Open,
@@ -643,35 +656,35 @@ while (true)
                 {
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set1);
-                    Console.WriteLine("                                               Health:" + set1);
+                    Console.WriteLine($"                                               Health:{set1}");
                     break;
                 }
                 else if (substring == "gold__")
                 {
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set2);
-                    Console.WriteLine("                                               Gold:" + set2);
+                    Console.WriteLine($"                                               Gold:{set2}");
                     break;
                 }
                 else if (substring == "exp___")
                 {
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set3);
-                    Console.WriteLine("                                               Exp:" + set3);
+                    Console.WriteLine($"                                               Exp:{set3}");
                     break;
                 }
                 else if (substring == "kills_")
                 {
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set4);
-                    Console.WriteLine("                                               Kills:" + set4);
+                    Console.WriteLine($"                                               Kills:{set4}");
                     break;
                 }
                 else if (substring == "floor_")
                 {
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set5);
-                    Console.WriteLine("                                               Floor:" + set5);
+                    Console.WriteLine($"                                               Floor:{set5}");
                     break;
                 }
                 //else if (substring == "stage_")
@@ -1216,6 +1229,8 @@ while (true)
                 savemain = true;
                 chosg1 = 0;
                 genloop = false;
+                break;
+            default:
                 break;
         }
     }
@@ -10443,7 +10458,7 @@ while (true)
                           "\r\n    " + _4x1botcell + "    " + _4x2botcell + "    " + _4x3botcell + "    " + _4x4botcell + "    " + _4x5botcell + "    " + _4x6botcell + "    " + _4x7botcell + "    " + _4x8botcell + "    " + _4x9botcell + "   " +
                           "\r\n                                                                                                                        " +
                           "\r\n------------------------------------------------------------------------------------------------------------------------" +
-                          "\n\r   [1] Numpad 1  |  [2] Numpad 2  |  [3] Numpad 3  |  [Back] Backspace                                              " +
+                          "\n\r   [W, ▲] Up  |  [A, ◄] Left  |  [S, ▼] Down  |  [D, ►] Right  |  [I] Inventory  |  [Backspace] Menu" +
                           "\n\r------------------------------------------------------------------------------------------------------------------------");
 
             player = true;
@@ -10495,17 +10510,11 @@ while (true)
                     player = false;
                     chosg2 = 4;
                     break;
-                case ConsoleKey.NumPad1:
-                    chosg2 = 5;
-                    break;
-                case ConsoleKey.NumPad2:
-                    //load = true;
-                    chosg2 = 6;
-                    break;
-                case ConsoleKey.NumPad3:
-                    //load = true;
-                    break;
                 case ConsoleKey.Enter:
+                    break;
+                case ConsoleKey.I:
+                    break;
+                default:
                     break;
             }
             // up
@@ -14843,14 +14852,16 @@ while (true)
         }
         while (battle)
         {
+            int enemyranid = 0;
+            int enemyquant = 0;
+            Random random = new Random();
             while (enemygen)
             {
                 int i = 0;
-                Random random = new Random();
-                int enemyquant = random.Next(0, 4);
+                enemyquant = random.Next(0, 4);
                 while (enemyquant >= i)
                 {
-                    int enemyranid = random.Next(1, 101);
+                    enemyranid = random.Next(1, 101);
                     if (enemyranid <= 30)
                     {
                         enemyranid = 1;
@@ -14888,38 +14899,87 @@ while (true)
                 turn = true;
             }
 
+
             while (turn)
             {
+                eventrender = $"\r\n                                                         Enemies:        1. {names[0, battlelog[0, 0]]} | 2. {names[0, battlelog[1, 0]]} | 3. {names[0, battlelog[2, 0]]} | 4. {names[0, battlelog[3, 0]]} " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        " +
+                          "\r\n                                                                                                                        ";
                 Console.WriteLine("------------------------------------------------------------------------------------------------------------------------" +
-                              "\r\n  |Health|:" + set1 + " |Gold|:" + set2 + " |Exp|: " + set3 +
+                              $"\r\n  |Health|:{set1} |Gold|:{set2} |Exp|: {set3} " +
                               "\r\n------------------------------------------------------------------------------------------------------------------------" +
                               eventrender +
                               "\r\n------------------------------------------------------------------------------------------------------------------------" +
-                              "\n\r   [1] Numpad 1  |  [2] Numpad 2  |  [3] Numpad 3                                              " +
+                              "\n\r   [1] Attack  |  [2] Deffence  |  [3] Inventory  |  [4] Run                                                        " +
                               "\n\r------------------------------------------------------------------------------------------------------------------------");
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.Backspace:
                         _event = false;
-                        //chosg2 = 1;
                         break;
                     case ConsoleKey.NumPad1:
                         _event = false;
-                        //chosg2 = 5;
                         break;
                     case ConsoleKey.NumPad2:
                         _event = false;
-                        //load = true;
-                        //chosg2 = 6;
                         break;
                     case ConsoleKey.NumPad3:
                         _event = false;
-                        //load = true;
+                        break;
+                    case ConsoleKey.NumPad4:
+                        enemyranid = random.Next(0, 101);
+                        if (0 == enemyquant && enemyranid <= 0)
+                        {
+                            _event = false;
+                        }
+                        else if (1 == enemyquant && enemyranid <= 25)
+                        {
+                            _event = false;
+                        }
+                        else if (2 == enemyquant && enemyranid <= 50)
+                        {
+                            _event = false;
+                        }
+                        else if (3 == enemyquant && enemyranid <= 75)
+                        {
+                            _event = false;
+                        }
                         break;
                     case ConsoleKey.Enter:
                         _event = false;
                         break;
+                    default:
+                        break;
                 }
+                for (int i = 0; i < 5; i++)
+                {
+                    //battllelog[]
+                }
+
+
+
+
+
             }
             break;
 
@@ -15012,6 +15072,26 @@ while (true)
                     //item
                 }
 
+                if (eventstate == 7)
+                {
+                    int eventran = random.Next(0, 101);
+                    if (eventran <= 25)
+                    {
+                        eventstate = 7;
+                        battle = true;
+                        enemygen = false;
+                        for (int j = 0; j < 5; j++)
+                        {
+                            battlelog[0, j] = spenemystats[0, j];
+                            j++;
+                        }
+                    }
+                    else if (eventran >= 26)
+                    {
+                        eventstate = 8;
+                        reward = true;
+                    }
+                }
                 if (eventstate == 1)
                 {
                     eventrender = "\r\n                                                                                                                        " +
@@ -15025,7 +15105,7 @@ while (true)
                               "\r\n                                                                              ░░              ░░                        " +
                               "\r\n                                                                              ░░░░░░░░░░░░░░░░░░                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                               You dropped by " + eventid + " floors                                                    " +
+                              $"\r\n                               You dropped by {eventid} floors                                                    " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                              ██████████████████                        " +
                               "\r\n                                                                              ██████████████████                        " +
@@ -15051,7 +15131,7 @@ while (true)
                               "\r\n                                                                              ██████████████████                        " +
                               "\r\n                                                                              ██████████████████                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                               You elevated by " + eventid + " floors                                                   " +
+                              $"\r\n                               You elevated by {eventid} floors                                                   " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                              ░░░░░░░░░░░░░░░░░░                        " +
                               "\r\n                                                                              ░░              ░░                        " +
@@ -15118,41 +15198,127 @@ while (true)
                 }
                 else if (eventstate == 5)
                 {
-
+                    eventrender = "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              $"\r\n                               You have been ambushed                                                   " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        ";
                 }
                 else if (eventstate == 6)
                 {
-
+                    eventrender = "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                             $"\r\n                               You have found chest                                                   " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                 Do you open it?                                                                       " +
+                              "\r\n                                    [1] Yes                                                                             " +
+                              "\r\n                                    [1] No                                                                              " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        ";
                 }
-
+                else if (eventstate == 7)
+                {
+                    eventrender = "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                  your gold changed by: " + eventid + "                                                                 " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        ";
+                }
+                else if (eventstate == 8)
+                {
+                    eventrender = "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                  your gold changed by: " + eventid + "                                                                 " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        ";
+                }
 
                 Console.Clear();
                 Console.WriteLine("------------------------------------------------------------------------------------------------------------------------" +
-                              "\r\n  |Health|:" + set1 + " |Gold|:" + set2 + " |Exp|: " + set3 +
+                              $"\r\n  |Health|:{set1} |Gold|:{set2} |Exp|: {set3} " +
                               "\r\n------------------------------------------------------------------------------------------------------------------------" +
                               eventrender +
                               "\r\n------------------------------------------------------------------------------------------------------------------------" +
                               "\n\r   [1] Numpad 1  |  [2] Numpad 2  |  [3] Numpad 3                                              " +
                               "\n\r------------------------------------------------------------------------------------------------------------------------");
-                //if (Console.ReadKey().Key != ConsoleKey.NumPad1) 
-                //{
-                //    _event = false;
-                //    break;
-                //}
-                //else if (Console.ReadKey().Key != ConsoleKey.NumPad2)
-                //{
-                //    _event = false;
-                //    break;
-                //}
-                //else if (Console.ReadKey().Key != ConsoleKey.NumPad3)
-                //{
-                //    _event = false;
-                //    break;
-                //}
+
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.Backspace:
                         _event = false;
+                        if (eventstate == 6)
+                        {
+                            _event = true;
+                            eventstate = 7;
+                        }
                         //chosg2 = 1;
                         break;
                     case ConsoleKey.NumPad1:
@@ -15170,6 +15336,8 @@ while (true)
                         break;
                     case ConsoleKey.Enter:
                         _event = false;
+                        break;
+                    default:
                         break;
                 }
                 eventid = -1;
