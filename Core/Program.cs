@@ -1275,6 +1275,7 @@ while (true)
     int percentage = 0;
     while (uniload)
     {
+        DateTime t1 = DateTime.Now;
         string bar = "..........";
 
         while (true)
@@ -1340,7 +1341,12 @@ while (true)
         Console.WriteLine("                                                 ------------");
         //bar + ".";
         count++;
-        System.Threading.Thread.Sleep(50);
+        DateTime t2 = DateTime.Now;
+        long loaddelay = ((t2.Ticks - t1.Ticks) / 10000) * -1;
+        if (loaddelay > 0)
+        {
+            System.Threading.Thread.Sleep((Int32)loaddelay);
+        }
     }
 
     while (genloop) //generation loop st 4
@@ -14902,6 +14908,8 @@ while (true)
 
             while (turn)
             {
+                int turnid = 0;
+                Console.Clear();
                 eventrender = $"\r\n                                                         Enemies:        1. {names[0, battlelog[0, 0]]} | 2. {names[0, battlelog[1, 0]]} | 3. {names[0, battlelog[2, 0]]} | 4. {names[0, battlelog[3, 0]]} " +
                           "\r\n                                                                                                                        " +
                           "\r\n                                                                                                                        " +
@@ -14916,8 +14924,7 @@ while (true)
                           "\r\n                                                                                                                        " +
                           "\r\n                                                                                                                        " +
                           "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
+                          $"\r\n                                                                                  {names[0,battlelog[turnid,0]]}                " +
                           "\r\n                                                                                                                        " +
                           "\r\n                                                                                                                        " +
                           "\r\n                                                                                                                        " +
@@ -14930,56 +14937,71 @@ while (true)
                               "\r\n------------------------------------------------------------------------------------------------------------------------" +
                               eventrender +
                               "\r\n------------------------------------------------------------------------------------------------------------------------" +
-                              "\n\r   [1] Attack  |  [2] Deffence  |  [3] Inventory  |  [4] Run                                                        " +
+                              "\n\r   [A, ◄] Previus  |  [D, ►] Next  |                                                                                " +
+                              "\n\r   [1] Attack      |  [2] Deffence |  [3] Inventory  |  [4] Run                                                     " +
                               "\n\r------------------------------------------------------------------------------------------------------------------------");
                 switch (Console.ReadKey().Key)
                 {
-                    case ConsoleKey.Backspace:
-                        _event = false;
-                        break;
                     case ConsoleKey.NumPad1:
-                        _event = false;
                         break;
                     case ConsoleKey.NumPad2:
-                        _event = false;
                         break;
                     case ConsoleKey.NumPad3:
-                        _event = false;
                         break;
                     case ConsoleKey.NumPad4:
                         enemyranid = random.Next(0, 101);
-                        if (0 == enemyquant && enemyranid <= 0)
+                        if (3 == enemyquant && enemyranid <= 0)
                         {
-                            _event = false;
+                            battle = false;
+                            break;
                         }
-                        else if (1 == enemyquant && enemyranid <= 25)
+                        else if (2 == enemyquant && enemyranid <= 25)
                         {
-                            _event = false;
+                            battle = false;
+                            break;
                         }
-                        else if (2 == enemyquant && enemyranid <= 50)
+                        else if (1 == enemyquant && enemyranid <= 50)
                         {
-                            _event = false;
+                            battle = false;
+                            break;
                         }
-                        else if (3 == enemyquant && enemyranid <= 75)
+                        else if (0 == enemyquant && enemyranid <= 75)
                         {
-                            _event = false;
+                            battle = false;
+                            break;
                         }
                         break;
                     case ConsoleKey.Enter:
                         _event = false;
                         break;
+                    case ConsoleKey.LeftArrow:
+                        chosg2 = 2;
+                        player = false;
+                        break;
+                    case ConsoleKey.RightArrow:
+                        chosg2 = 3;
+                        player = false;
+                        break;
+                    case ConsoleKey.A:
+                        player = false;
+                        chosg2 = 2;
+                        break;
+                    case ConsoleKey.D:
+                        player = false;
+                        chosg2 = 3;
+                        break;
+                        break;
                     default:
                         break;
                 }
-                for (int i = 0; i < 5; i++)
+                while (battle)
                 {
-                    //battllelog[]
+                    for (int i = 0; i < 5; i++)
+                    {
+                        //battllelog[]
+                    }
+                    break;
                 }
-
-
-
-
-
             }
             break;
 
@@ -15004,13 +15026,13 @@ while (true)
                     if (eventid == 1)
                     {
                         eventstate = 1;
-                        eventid = random.Next(-4, 0);
+                        eventid = random.Next(-2, 0);
                         set5 = set5 + eventid;
                     }
                     else if (eventid >= 2)
                     {
                         eventstate = 2;
-                        eventid = random.Next(1, 5);
+                        eventid = random.Next(1, 3);
                         set5 = set5 + eventid;
                     }
                 }
@@ -15090,6 +15112,7 @@ while (true)
                     {
                         eventstate = 8;
                         reward = true;
+                        _event = false;
                     }
                 }
                 if (eventstate == 1)
@@ -15115,7 +15138,7 @@ while (true)
                               "\r\n                                                                                      ██                                " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
+                              "\r\n                                        [1] Continue                                                                    " +
                               "\r\n                                                                                                                        ";
                 }
                 if (eventstate == 2)
@@ -15141,7 +15164,7 @@ while (true)
                               "\r\n                                                                                      ░░                                " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
+                              "\r\n                                        [1] Continue                                                                    " +
                               "\r\n                                                                                                                        ";
                 }
                 else if (eventstate == 3)
@@ -15167,7 +15190,7 @@ while (true)
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
+                              "\r\n                                        [1] Continue                                                                    " +
                               "\r\n                                                                                                                        ";
                 }
                 else if (eventstate == 4)
@@ -15193,7 +15216,7 @@ while (true)
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
+                              "\r\n                                        [1] Continue                                                                    " +
                               "\r\n                                                                                                                        ";
                 }
                 else if (eventstate == 5)
@@ -15219,7 +15242,7 @@ while (true)
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
+                              "\r\n                                        [1] Continue                                                                    " +
                               "\r\n                                                                                                                        ";
                 }
                 else if (eventstate == 6)
@@ -15249,14 +15272,14 @@ while (true)
                               "\r\n                                                                                                                        ";
                 }
                 else if (eventstate == 7)
-                {
+                {// mimic chest pic
                     eventrender = "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                                  your gold changed by: " + eventid + "                                                                 " +
+                              "\r\n                                            chest mimic                                                                 " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
@@ -15271,18 +15294,18 @@ while (true)
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
+                              "\r\n                                        [1] Continue                                                                    " +
                               "\r\n                                                                                                                        ";
                 }
                 else if (eventstate == 8)
-                {
+                {// chest open pic
                     eventrender = "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
-                              "\r\n                                  your gold changed by: " + eventid + "                                                                 " +
+                              "\r\n                                           'chest'  loot                                                                " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
                               "\r\n                                                                                                                        " +
@@ -15309,32 +15332,25 @@ while (true)
                               "\r\n------------------------------------------------------------------------------------------------------------------------" +
                               "\n\r   [1] Numpad 1  |  [2] Numpad 2  |  [3] Numpad 3                                              " +
                               "\n\r------------------------------------------------------------------------------------------------------------------------");
+                if (eventstate == 8)
+                {
+                    break;
+                }
 
                 switch (Console.ReadKey().Key)
                 {
-                    case ConsoleKey.Backspace:
+                    case ConsoleKey.NumPad1:
                         _event = false;
                         if (eventstate == 6)
                         {
                             _event = true;
                             eventstate = 7;
                         }
-                        //chosg2 = 1;
-                        break;
-                    case ConsoleKey.NumPad1:
-                        _event = false;
-                        //chosg2 = 5;
                         break;
                     case ConsoleKey.NumPad2:
                         _event = false;
-                        //load = true;
-                        //chosg2 = 6;
                         break;
                     case ConsoleKey.NumPad3:
-                        _event = false;
-                        //load = true;
-                        break;
-                    case ConsoleKey.Enter:
                         _event = false;
                         break;
                     default:
@@ -15342,6 +15358,7 @@ while (true)
                 }
                 eventid = -1;
             }
+            break;
         }
         while (shop)
         {

@@ -154,4881 +154,4881 @@ int _6x9 = 0;
 
 
 
-while (startcell)
-{
-    Random random = new Random();
-    int ranout = random.Next(1, 36);
-    Console.WriteLine(ranout);
-    if (ranout == 1)
-    {
-        _1x1 = 10;
-    }
-    else if (ranout == 2)
-    {
-        _1x3 = 10;
-    }
-    else if (ranout == 3)
-    {
-        _1x5 = 10;
-    }
-    else if (ranout == 4)
-    {
-        _1x7 = 10;
-    }
-    else if (ranout == 5)
-    {
-        _1x9 = 10;
-    }
-    else if (ranout == 6)
-    {
-        _1x11 = 10;
-    }
-    else if (ranout == 7)
-    {
-        _1x13 = 10;
-    }
-    else if (ranout == 8)
-    {
-        _1x15 = 10;
-    }
-    else if (ranout == 9)
-    {
-        _1x17 = 10;
-    }
-    else if (ranout == 10)
-    {
-        _3x1 = 10;
-    }
-    else if (ranout == 11)
-    {
-        _3x3 = 10;
-    }
-    else if (ranout == 12)
-    {
-        _3x5 = 10;
-    }
-    else if (ranout == 13)
-    {
-        _3x7 = 10;
-    }
-    else if (ranout == 14)
-    {
-        _3x9 = 10;
-    }
-    else if (ranout == 15)
-    {
-        _3x11 = 10;
-    }
-    else if (ranout == 16)
-    {
-        _3x13 = 10;
-    }
-    else if (ranout == 17)
-    {
-        _3x15 = 10;
-    }
-    else if (ranout == 18)
-    {
-        _3x17 = 10;
-    }
-    else if (ranout == 19)
-    {
-        _5x1 = 10;
-    }
-    else if (ranout == 20)
-    {
-        _5x3 = 10;
-    }
-    else if (ranout == 21)
-    {
-        _5x5 = 10;
-    }
-    else if (ranout == 22)
-    {
-        _5x7 = 10;
-    }
-    else if (ranout == 23)
-    {
-        _5x9 = 10;
-    }
-    else if (ranout == 24)
-    {
-        _5x11 = 10;
-    }
-    else if (ranout == 25)
-    {
-        _5x13 = 10;
-    }
-    else if (ranout == 26)
-    {
-        _5x15 = 10;
-    }
-    else if (ranout == 27)
-    {
-        _5x17 = 10;
-    }
-    else if (ranout == 28)
-    {
-        _7x1 = 10;
-    }
-    else if (ranout == 29)
-    {
-        _7x3 = 10;
-    }
-    else if (ranout == 30)
-    {
-        _7x5 = 10;
-    }
-    else if (ranout == 31)
-    {
-        _7x7 = 10;
-    }
-    else if (ranout == 32)
-    {
-        _7x9 = 10;
-    }
-    else if (ranout == 33)
-    {
-        _7x11 = 10;
-    }
-    else if (ranout == 34)
-    {
-        _7x13 = 10;
-    }
-    else if (ranout == 35)
-    {
-        _7x15 = 10;
-    }
-    else if (ranout == 36)
-    {
-        _7x17 = 10;
-    }
-    startcell = false;
-}
-/*
-9 x 4 = 36 stages
-8 x 4 + 9 x 3 = 59 paths
-X:1 - 7 * Y:1 - 17 = 119 grid
+//while (startcell)
+//{
+//    Random random = new Random();
+//    int ranout = random.Next(1, 36);
+//    Console.WriteLine(ranout);
+//    if (ranout == 1)
+//    {
+//        _1x1 = 10;
+//    }
+//    else if (ranout == 2)
+//    {
+//        _1x3 = 10;
+//    }
+//    else if (ranout == 3)
+//    {
+//        _1x5 = 10;
+//    }
+//    else if (ranout == 4)
+//    {
+//        _1x7 = 10;
+//    }
+//    else if (ranout == 5)
+//    {
+//        _1x9 = 10;
+//    }
+//    else if (ranout == 6)
+//    {
+//        _1x11 = 10;
+//    }
+//    else if (ranout == 7)
+//    {
+//        _1x13 = 10;
+//    }
+//    else if (ranout == 8)
+//    {
+//        _1x15 = 10;
+//    }
+//    else if (ranout == 9)
+//    {
+//        _1x17 = 10;
+//    }
+//    else if (ranout == 10)
+//    {
+//        _3x1 = 10;
+//    }
+//    else if (ranout == 11)
+//    {
+//        _3x3 = 10;
+//    }
+//    else if (ranout == 12)
+//    {
+//        _3x5 = 10;
+//    }
+//    else if (ranout == 13)
+//    {
+//        _3x7 = 10;
+//    }
+//    else if (ranout == 14)
+//    {
+//        _3x9 = 10;
+//    }
+//    else if (ranout == 15)
+//    {
+//        _3x11 = 10;
+//    }
+//    else if (ranout == 16)
+//    {
+//        _3x13 = 10;
+//    }
+//    else if (ranout == 17)
+//    {
+//        _3x15 = 10;
+//    }
+//    else if (ranout == 18)
+//    {
+//        _3x17 = 10;
+//    }
+//    else if (ranout == 19)
+//    {
+//        _5x1 = 10;
+//    }
+//    else if (ranout == 20)
+//    {
+//        _5x3 = 10;
+//    }
+//    else if (ranout == 21)
+//    {
+//        _5x5 = 10;
+//    }
+//    else if (ranout == 22)
+//    {
+//        _5x7 = 10;
+//    }
+//    else if (ranout == 23)
+//    {
+//        _5x9 = 10;
+//    }
+//    else if (ranout == 24)
+//    {
+//        _5x11 = 10;
+//    }
+//    else if (ranout == 25)
+//    {
+//        _5x13 = 10;
+//    }
+//    else if (ranout == 26)
+//    {
+//        _5x15 = 10;
+//    }
+//    else if (ranout == 27)
+//    {
+//        _5x17 = 10;
+//    }
+//    else if (ranout == 28)
+//    {
+//        _7x1 = 10;
+//    }
+//    else if (ranout == 29)
+//    {
+//        _7x3 = 10;
+//    }
+//    else if (ranout == 30)
+//    {
+//        _7x5 = 10;
+//    }
+//    else if (ranout == 31)
+//    {
+//        _7x7 = 10;
+//    }
+//    else if (ranout == 32)
+//    {
+//        _7x9 = 10;
+//    }
+//    else if (ranout == 33)
+//    {
+//        _7x11 = 10;
+//    }
+//    else if (ranout == 34)
+//    {
+//        _7x13 = 10;
+//    }
+//    else if (ranout == 35)
+//    {
+//        _7x15 = 10;
+//    }
+//    else if (ranout == 36)
+//    {
+//        _7x17 = 10;
+//    }
+//    startcell = false;
+//}
+///*
+//9 x 4 = 36 stages
+//8 x 4 + 9 x 3 = 59 paths
+//X:1 - 7 * Y:1 - 17 = 119 grid
 
-//cell index
-0 - doesnt exist
-1 - empty non explored (gen only)
-2 - empty explored (base after evyrting)
-3 - enemy
-E
-v
-4 - evnt cell (idk yet)
-%
-v
-5 - boss cell (end floor)
-B
-v
-....
-10 - also start in gen
-11 - generated empty non conectable (not explored )
-12 - dead end empty non explored
-13 - player pos
-*/
+////cell index
+//0 - doesnt exist
+//1 - empty non explored (gen only)
+//2 - empty explored (base after evyrting)
+//3 - enemy
+//E
+//v
+//4 - evnt cell (idk yet)
+//%
+//v
+//5 - boss cell (end floor)
+//B
+//v
+//....
+//10 - also start in gen
+//11 - generated empty non conectable (not explored )
+//12 - dead end empty non explored
+//13 - player pos
+//*/
 
-while (cellgen)
-{
-    Random random4 = new Random();
-    int ranout4 = random4.Next(2, 25);
-
-
-    if (_1x1 == 10 || _1x1 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x1 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _3x1 == 0)
-            {
-                _2x1 = 1;
-                _3x1 = 12;
-            }
-            if (ranout2 >= 50 && _1x3 == 0)
-            {
-                _1x2 = 1;
-                _1x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _3x1 == 0)
-            {
-                _2x1 = 1;
-                _3x1 = 12;
-            }
-            if (ranout2 >= 50 && _1x3 == 0)
-            {
-                _1x2 = 1;
-                _1x3 = 12;
-            }
-            _2x1 = 1;
-            _1x1 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _1x1 == 0)
-            {
-                _2x1 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 >= 50 && _3x1 == 0)
-            {
-                _2x1 = 1;
-                _3x1 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _1x1 == 0)
-            {
-                _2x1 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 >= 150 && _3x1 == 0)
-            {
-                _2x1 = 1;
-                _3x1 = 12;
-            }
-            _1x2 = 1;
-            _1x3 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _1x1 == 0)
-            {
-                _2x1 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 >= 50 && _1x3 == 0)
-            {
-                _1x2 = 1;
-                _1x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _1x1 == 0)
-            {
-                _2x1 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 >= 50 && _1x3 == 0)
-            {
-                _1x2 = 1;
-                _1x3 = 12;
-            }
-            _2x1 = 1;
-            _3x1 = 1;
-        }
-        if (_1x1 == 1)
-        {
-            _1x1 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_1x3 == 10 || _1x3 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x3 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _3x3 == 0)
-            {
-                _2x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
-            {
-                _1x2 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
-            {
-                _1x4 = 1;
-                _1x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x3 == 0)
-            {
-                _2x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
-            {
-                _1x2 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
-            {
-                _1x4 = 1;
-                _1x5 = 12;
-            }
-            _2x2 = 1;
-            _1x3 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
-            {
-                _2x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
-            {
-                _1x4 = 1;
-                _1x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
-            {
-                _2x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
-            {
-                _1x4 = 1;
-                _1x5 = 12;
-            }
-            _1x2 = 1;
-            _1x1 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
-            {
-                _1x2 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x3 == 0)
-            {
-                _2x2 = 1;
-                _3x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
-            {
-                _1x2 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x3 == 0)
-            {
-                _2x2 = 1;
-                _3x3 = 12;
-            }
-            _1x4 = 1;
-            _1x5 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
-            {
-                _1x2 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
-            {
-                _1x4 = 1;
-                _1x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
-            {
-                _1x2 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
-            {
-                _1x4 = 1;
-                _1x5 = 12;
-            }
-            _2x2 = 1;
-            _3x3 = 1;
-        }
-        if (_1x3 == 1)
-        {
-            _1x3 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_1x5 == 10 || _1x5 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x5 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _3x5 == 0)
-            {
-                _2x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
-            {
-                _1x4 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
-            {
-                _1x6 = 1;
-                _1x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x5 == 0)
-            {
-                _2x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
-            {
-                _1x4 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
-            {
-                _1x6 = 1;
-                _1x7 = 12;
-            }
-            _2x3 = 1;
-            _1x5 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
-            {
-                _2x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
-            {
-                _1x6 = 1;
-                _1x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
-            {
-                _2x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
-            {
-                _1x6 = 1;
-                _1x7 = 12;
-            }
-            _1x4 = 1;
-            _1x3 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
-            {
-                _1x4 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
-            {
-                _2x3 = 1;
-                _3x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
-            {
-                _1x4 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
-            {
-                _2x3 = 1;
-                _3x5 = 12;
-            }
-            _1x6 = 1;
-            _1x7 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
-            {
-                _1x4 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
-            {
-                _1x6 = 1;
-                _1x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
-            {
-                _1x4 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
-            {
-                _1x6 = 1;
-                _1x7 = 12;
-            }
-            _2x3 = 1;
-            _3x5 = 1;
-        }
-        if (_1x5 == 1)
-        {
-            _1x5 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_1x7 == 10 || _1x7 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x7 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _3x7 == 0)
-            {
-                _2x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
-            {
-                _1x6 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
-            {
-                _1x8 = 1;
-                _1x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x7 == 0)
-            {
-                _2x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
-            {
-                _1x6 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
-            {
-                _1x8 = 1;
-                _1x9 = 12;
-            }
-            _2x4 = 1;
-            _1x7 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
-            {
-                _2x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
-            {
-                _1x8 = 1;
-                _1x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
-            {
-                _2x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
-            {
-                _1x8 = 1;
-                _1x9 = 12;
-            }
-            _1x6 = 1;
-            _1x5 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
-            {
-                _1x6 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
-            {
-                _2x4 = 1;
-                _3x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
-            {
-                _1x6 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
-            {
-                _2x4 = 1;
-                _3x7 = 12;
-            }
-            _1x8 = 1;
-            _1x9 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
-            {
-                _1x6 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
-            {
-                _1x8 = 1;
-                _1x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
-            {
-                _1x6 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
-            {
-                _1x8 = 1;
-                _1x9 = 12;
-            }
-            _2x4 = 1;
-            _3x7 = 1;
-        }
-        if (_1x7 == 1)
-        {
-            _1x7 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_1x9 == 10 || _1x9 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x9 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _3x9 == 0)
-            {
-                _2x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
-            {
-                _1x8 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
-            {
-                _1x10 = 1;
-                _1x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x9 == 0)
-            {
-                _2x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
-            {
-                _1x8 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
-            {
-                _1x10 = 1;
-                _1x11 = 12;
-            }
-            _2x5 = 1;
-            _1x9 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
-            {
-                _2x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
-            {
-                _1x10 = 1;
-                _1x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
-            {
-                _2x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
-            {
-                _1x10 = 1;
-                _1x11 = 12;
-            }
-            _1x8 = 1;
-            _1x7 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
-            {
-                _1x8 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
-            {
-                _2x5 = 1;
-                _3x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
-            {
-                _1x8 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
-            {
-                _2x5 = 1;
-                _3x9 = 12;
-            }
-            _1x10 = 1;
-            _1x11 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
-            {
-                _1x8 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
-            {
-                _1x10 = 1;
-                _1x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
-            {
-                _1x8 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
-            {
-                _1x10 = 1;
-                _1x11 = 12;
-            }
-            _2x5 = 1;
-            _3x9 = 1;
-        }
-        if (_1x9 == 1)
-        {
-            _1x9 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_1x11 == 10 || _1x11 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x11 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _3x11 == 0)
-            {
-                _2x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
-            {
-                _1x10 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
-            {
-                _1x12 = 1;
-                _1x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x11 == 0)
-            {
-                _2x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
-            {
-                _1x10 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
-            {
-                _1x12 = 1;
-                _1x13 = 12;
-            }
-            _2x6 = 1;
-            _1x11 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
-            {
-                _2x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
-            {
-                _1x12 = 1;
-                _1x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
-            {
-                _2x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
-            {
-                _1x12 = 1;
-                _1x13 = 12;
-            }
-            _1x10 = 1;
-            _1x9 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
-            {
-                _1x10 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
-            {
-                _2x6 = 1;
-                _3x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
-            {
-                _1x10 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
-            {
-                _2x6 = 1;
-                _3x11 = 12;
-            }
-            _1x12 = 1;
-            _1x13 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
-            {
-                _1x10 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
-            {
-                _1x12 = 1;
-                _1x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
-            {
-                _1x10 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
-            {
-                _1x12 = 1;
-                _1x13 = 12;
-            }
-            _2x6 = 1;
-            _3x11 = 1;
-        }
-        if (_1x11 == 1)
-        {
-            _1x11 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_1x13 == 10 || _1x13 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x13 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _3x13 == 0)
-            {
-                _2x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
-            {
-                _1x12 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
-            {
-                _1x14 = 1;
-                _1x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x13 == 0)
-            {
-                _2x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
-            {
-                _1x12 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
-            {
-                _1x14 = 1;
-                _1x15 = 12;
-            }
-            _2x7 = 1;
-            _1x13 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
-            {
-                _2x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
-            {
-                _1x14 = 1;
-                _1x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
-            {
-                _2x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
-            {
-                _1x14 = 1;
-                _1x15 = 12;
-            }
-            _1x12 = 1;
-            _1x11 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
-            {
-                _1x12 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
-            {
-                _2x7 = 1;
-                _3x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
-            {
-                _1x12 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
-            {
-                _2x7 = 1;
-                _3x13 = 12;
-            }
-            _1x14 = 1;
-            _1x15 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
-            {
-                _1x12 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
-            {
-                _1x14 = 1;
-                _1x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
-            {
-                _1x12 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
-            {
-                _1x14 = 1;
-                _1x15 = 12;
-            }
-            _2x7 = 1;
-            _3x13 = 1;
-        }
-        if (_1x13 == 1)
-        {
-            _1x13 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_1x15 == 10 || _1x15 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x15 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _3x15 == 0)
-            {
-                _2x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
-            {
-                _1x14 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
-            {
-                _1x16 = 1;
-                _1x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x15 == 0)
-            {
-                _2x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
-            {
-                _1x14 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
-            {
-                _1x16 = 1;
-                _1x17 = 12;
-            }
-            _2x8 = 1;
-            _1x15 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x15 == 0)
-            {
-                _2x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
-            {
-                _1x16 = 1;
-                _1x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x15 == 0)
-            {
-                _2x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
-            {
-                _1x16 = 1;
-                _1x17 = 12;
-            }
-            _1x14 = 1;
-            _1x13 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
-            {
-                _1x14 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
-            {
-                _2x8 = 1;
-                _3x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
-            {
-                _1x14 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
-            {
-                _2x8 = 1;
-                _3x15 = 12;
-            }
-            _1x16 = 1;
-            _1x17 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
-            {
-                _1x14 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
-            {
-                _1x16 = 1;
-                _1x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
-            {
-                _1x14 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
-            {
-                _1x16 = 1;
-                _1x17 = 12;
-            }
-            _2x8 = 1;
-            _3x15 = 1;
-        }
-        if (_1x15 == 1)
-        {
-            _1x15 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_1x17 == 10 || _1x17 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _1x17 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _3x17 == 0)
-            {
-                _2x9 = 1;
-                _3x17 = 12;
-            }
-            if (ranout2 >= 50 && _1x15 == 0)
-            {
-                _1x16 = 1;
-                _1x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _3x17 == 0)
-            {
-                _2x9 = 1;
-                _3x17 = 12;
-            }
-            if (ranout2 >= 50 && _1x15 == 0)
-            {
-                _1x16 = 1;
-                _1x15 = 12;
-            }
-            _2x9 = 1;
-            _1x17 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _1x17 == 0)
-            {
-                _2x9 = 1;
-                _1x17 = 12;
-            }
-            if (ranout2 >= 50 && _3x17 == 0)
-            {
-                _2x9 = 1;
-                _3x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _1x17 == 0)
-            {
-                _2x9 = 1;
-                _1x17 = 12;
-            }
-            if (ranout2 >= 50 && _3x17 == 0)
-            {
-                _2x9 = 1;
-                _3x17 = 12;
-            }
-            _1x16 = 1;
-            _1x15 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _1x17 == 0)
-            {
-                _2x9 = 1;
-                _1x17 = 12;
-            }
-            if (ranout2 >= 50 && _1x15 == 0)
-            {
-                _1x16 = 1;
-                _1x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _1x17 == 0)
-            {
-                _2x9 = 1;
-                _1x17 = 12;
-            }
-            if (ranout2 >= 50 && _1x15 == 0)
-            {
-                _1x16 = 1;
-                _1x15 = 12;
-            }
-            _2x9 = 1;
-            _3x17 = 1;
-        }
-        if (_1x17 == 1)
-        {
-            _1x17 = 11;
-        }
-        cellcount++;
-    }
-    // coridors done from here                                                                            //////////////////////
-    if (_3x1 == 10 || _3x1 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x1 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _5x1 == 0)
-            {
-                _4x1 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 >= 50 && _3x3 == 0)
-            {
-                _3x2 = 1;
-                _3x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x1 == 0)
-            {
-                _4x1 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 >= 50 && _3x3 == 0)
-            {
-                _3x2 = 1;
-                _3x3 = 12;
-            }
-            _2x1 = 1;
-            _1x1 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _1x1 == 0)
-            {
-                _2x1 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 >= 50 && _5x1 == 0)
-            {
-                _4x1 = 1;
-                _5x1 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _1x1 == 0)
-            {
-                _2x1 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 >= 50 && _5x1 == 0)
-            {
-                _4x1 = 1;
-                _5x1 = 12;
-            }
-            _3x2 = 1;
-            _3x3 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _1x1 == 0)
-            {
-                _2x1 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 >= 50 && _3x3 == 0)
-            {
-                _3x2 = 1;
-                _3x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _1x1 == 0)
-            {
-                _2x1 = 1;
-                _1x1 = 12;
-            }
-            if (ranout2 >= 50 && _3x3 == 0)
-            {
-                _3x2 = 1;
-                _3x3 = 12;
-            }
-            _4x1 = 1;
-            _5x1 = 1;
-        }
-        if (_3x1 == 1)
-        {
-            _3x1 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_3x3 == 10 || _3x3 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x3 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _5x3 == 0)
-            {
-                _4x2 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
-            {
-                _3x2 = 1;
-                _3x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
-            {
-                _3x4 = 1;
-                _3x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _5x3 == 0)
-            {
-                _4x2 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
-            {
-                _3x2 = 1;
-                _3x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
-            {
-                _3x4 = 1;
-                _3x5 = 12;
-            }
-            _2x2 = 1;
-            _1x3 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
-            {
-                _4x2 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
-            {
-                _3x4 = 1;
-                _3x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
-            {
-                _4x2 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
-            {
-                _3x4 = 1;
-                _3x5 = 12;
-            }
-            _3x2 = 1;
-            _3x1 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
-            {
-                _3x2 = 1;
-                _3x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x3 == 0)
-            {
-                _4x2 = 1;
-                _5x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
-            {
-                _3x2 = 1;
-                _3x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x3 == 0)
-            {
-                _4x2 = 1;
-                _5x3 = 12;
-            }
-            _3x4 = 1;
-            _3x5 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
-            {
-                _3x2 = 1;
-                _3x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
-            {
-                _3x4 = 1;
-                _3x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x3 == 0)
-            {
-                _2x2 = 1;
-                _1x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
-            {
-                _3x2 = 1;
-                _3x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
-            {
-                _3x4 = 1;
-                _3x5 = 12;
-            }
-            _4x2 = 1;
-            _5x3 = 1;
-        }
-        if (_3x3 == 1)
-        {
-            _3x3 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_3x5 == 10 || _3x5 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x5 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _5x5 == 0)
-            {
-                _4x3 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
-            {
-                _3x4 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
-            {
-                _3x6 = 1;
-                _3x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _5x5 == 0)
-            {
-                _4x3 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
-            {
-                _3x4 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
-            {
-                _3x6 = 1;
-                _3x7 = 12;
-            }
-            _2x3 = 1;
-            _1x5 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
-            {
-                _4x3 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
-            {
-                _3x6 = 1;
-                _3x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
-            {
-                _4x3 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
-            {
-                _3x6 = 1;
-                _3x7 = 12;
-            }
-            _3x4 = 1;
-            _3x3 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
-            {
-                _3x4 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
-            {
-                _4x3 = 1;
-                _5x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
-            {
-                _3x4 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
-            {
-                _4x3 = 1;
-                _5x5 = 12;
-            }
-            _3x6 = 1;
-            _3x7 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
-            {
-                _3x4 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
-            {
-                _3x6 = 1;
-                _3x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x5 == 0)
-            {
-                _2x3 = 1;
-                _1x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
-            {
-                _3x4 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
-            {
-                _3x6 = 1;
-                _3x7 = 12;
-            }
-            _4x3 = 1;
-            _5x5 = 1;
-        }
-        if (_3x5 == 1)
-        {
-            _3x5 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_3x7 == 10 || _3x7 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x7 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _5x7 == 0)
-            {
-                _4x4 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
-            {
-                _3x6 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
-            {
-                _3x8 = 1;
-                _3x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _5x7 == 0)
-            {
-                _4x4 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
-            {
-                _3x6 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
-            {
-                _3x8 = 1;
-                _3x9 = 12;
-            }
-            _2x4 = 1;
-            _1x7 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
-            {
-                _4x4 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
-            {
-                _3x8 = 1;
-                _3x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
-            {
-                _4x4 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
-            {
-                _3x8 = 1;
-                _3x9 = 12;
-            }
-            _3x6 = 1;
-            _3x5 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
-            {
-                _3x6 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
-            {
-                _4x4 = 1;
-                _5x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
-            {
-                _3x6 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
-            {
-                _4x4 = 1;
-                _5x7 = 12;
-            }
-            _3x8 = 1;
-            _3x9 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
-            {
-                _3x6 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
-            {
-                _3x8 = 1;
-                _3x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x7 == 0)
-            {
-                _2x4 = 1;
-                _1x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
-            {
-                _3x6 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
-            {
-                _3x8 = 1;
-                _3x9 = 12;
-            }
-            _4x4 = 1;
-            _5x7 = 1;
-        }
-        if (_3x7 == 1)
-        {
-            _3x7 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_3x9 == 10 || _3x9 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x9 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _5x9 == 0)
-            {
-                _4x5 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
-            {
-                _3x8 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
-            {
-                _3x10 = 1;
-                _3x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _5x9 == 0)
-            {
-                _4x5 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
-            {
-                _3x8 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
-            {
-                _3x10 = 1;
-                _3x11 = 12;
-            }
-            _2x5 = 1;
-            _1x9 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
-            {
-                _4x5 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
-            {
-                _3x10 = 1;
-                _3x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
-            {
-                _4x5 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
-            {
-                _3x10 = 1;
-                _3x11 = 12;
-            }
-            _3x8 = 1;
-            _3x7 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
-            {
-                _3x8 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
-            {
-                _4x5 = 1;
-                _5x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
-            {
-                _3x8 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
-            {
-                _4x5 = 1;
-                _5x9 = 12;
-            }
-            _3x10 = 1;
-            _3x11 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
-            {
-                _3x8 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
-            {
-                _3x10 = 1;
-                _3x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x9 == 0)
-            {
-                _2x5 = 1;
-                _1x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
-            {
-                _3x8 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
-            {
-                _3x10 = 1;
-                _3x11 = 12;
-            }
-            _4x5 = 1;
-            _5x9 = 1;
-        }
-        if (_3x9 == 1)
-        {
-            _3x9 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_3x11 == 10 || _3x11 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x11 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _5x11 == 0)
-            {
-                _4x6 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
-            {
-                _3x10 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
-            {
-                _3x12 = 1;
-                _3x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _5x11 == 0)
-            {
-                _4x6 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
-            {
-                _3x10 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
-            {
-                _3x12 = 1;
-                _3x13 = 12;
-            }
-            _2x6 = 1;
-            _1x11 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
-            {
-                _4x6 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
-            {
-                _3x12 = 1;
-                _3x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
-            {
-                _4x6 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
-            {
-                _3x12 = 1;
-                _3x13 = 12;
-            }
-            _3x10 = 1;
-            _3x9 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
-            {
-                _3x10 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
-            {
-                _4x6 = 1;
-                _5x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
-            {
-                _3x10 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
-            {
-                _4x6 = 1;
-                _5x11 = 12;
-            }
-            _3x12 = 1;
-            _3x13 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
-            {
-                _3x10 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
-            {
-                _3x12 = 1;
-                _3x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x11 == 0)
-            {
-                _2x6 = 1;
-                _1x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
-            {
-                _3x10 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
-            {
-                _3x12 = 1;
-                _3x13 = 12;
-            }
-            _4x6 = 1;
-            _5x11 = 1;
-        }
-        if (_3x11 == 1)
-        {
-            _3x11 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_3x13 == 10 || _3x13 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x13 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _5x13 == 0)
-            {
-                _4x7 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
-            {
-                _3x12 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
-            {
-                _3x14 = 1;
-                _3x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _5x13 == 0)
-            {
-                _4x7 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
-            {
-                _3x12 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
-            {
-                _3x14 = 1;
-                _3x15 = 12;
-            }
-            _2x7 = 1;
-            _1x13 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
-            {
-                _4x7 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
-            {
-                _3x14 = 1;
-                _3x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
-            {
-                _4x7 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
-            {
-                _3x14 = 1;
-                _3x15 = 12;
-            }
-            _3x12 = 1;
-            _3x11 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
-            {
-                _3x12 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
-            {
-                _4x7 = 1;
-                _5x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
-            {
-                _3x12 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
-            {
-                _4x7 = 1;
-                _5x13 = 12;
-            }
-            _3x14 = 1;
-            _3x15 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
-            {
-                _3x12 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
-            {
-                _3x14 = 1;
-                _3x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x13 == 0)
-            {
-                _2x7 = 1;
-                _1x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
-            {
-                _3x12 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
-            {
-                _3x14 = 1;
-                _3x15 = 12;
-            }
-            _4x7 = 1;
-            _5x13 = 1;
-        }
-        if (_3x13 == 1)
-        {
-            _3x13 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_3x15 == 10 || _3x15 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x15 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _5x15 == 0)
-            {
-                _4x8 = 1;
-                _5x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
-            {
-                _3x14 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
-            {
-                _3x16 = 1;
-                _3x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _5x15 == 0)
-            {
-                _4x8 = 1;
-                _5x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
-            {
-                _3x14 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
-            {
-                _3x16 = 1;
-                _3x17 = 12;
-            }
-            _2x8 = 1;
-            _1x15 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x15 == 0)
-            {
-                _4x8 = 1;
-                _5x15 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
-            {
-                _3x16 = 1;
-                _3x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x15 == 0)
-            {
-                _4x8 = 1;
-                _5x15 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
-            {
-                _3x16 = 1;
-                _3x17 = 12;
-            }
-            _3x14 = 1;
-            _3x13 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
-            {
-                _3x14 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
-            {
-                _4x8 = 1;
-                _5x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
-            {
-                _3x14 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
-            {
-                _4x8 = 1;
-                _5x15 = 12;
-            }
-            _3x16 = 1;
-            _3x17 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
-            {
-                _3x14 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
-            {
-                _3x16 = 1;
-                _3x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _1x15 == 0)
-            {
-                _2x8 = 1;
-                _1x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
-            {
-                _3x14 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
-            {
-                _3x16 = 1;
-                _3x17 = 12;
-            }
-            _4x8 = 1;
-            _5x15 = 1;
-        }
-        if (_3x15 == 1)
-        {
-            _3x15 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_3x17 == 10 || _3x17 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _3x17 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _5x17 == 0)
-            {
-                _4x9 = 1;
-                _5x17 = 12;
-            }
-            if (ranout2 >= 50 && _3x15 == 0)
-            {
-                _3x16 = 1;
-                _3x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x17 == 0)
-            {
-                _4x9 = 1;
-                _5x17 = 12;
-            }
-            if (ranout2 >= 50 && _3x15 == 0)
-            {
-                _3x16 = 1;
-                _3x15 = 12;
-            }
-            _2x9 = 1;
-            _1x17 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 34 && _1x17 == 0)
-            {
-                _2x9 = 1;
-                _1x17 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x17 == 0)
-            {
-                _4x9 = 1;
-                _5x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _1x17 == 0)
-            {
-                _2x9 = 1;
-                _1x17 = 12;
-            }
-            if (ranout2 >= 50 && _5x17 == 0)
-            {
-                _4x9 = 1;
-                _5x17 = 12;
-            }
-            _3x16 = 1;
-            _3x15 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _1x17 == 0)
-            {
-                _2x9 = 1;
-                _1x17 = 12;
-            }
-            if (ranout2 >= 50 && _3x15 == 0)
-            {
-                _3x16 = 1;
-                _3x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _1x17 == 0)
-            {
-                _2x9 = 1;
-                _1x17 = 12;
-            }
-            if (ranout2 >= 650 && _3x15 == 0)
-            {
-                _3x16 = 1;
-                _3x15 = 12;
-            }
-            _4x9 = 1;
-            _5x17 = 1;
-        }
-        if (_3x17 == 1)
-        {
-            _3x17 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_5x1 == 10 || _5x1 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x1 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _7x1 == 0)
-            {
-                _6x1 = 1;
-                _7x1 = 12;
-            }
-            if (ranout2 >= 50 && _5x3 == 0)
-            {
-                _5x2 = 1;
-                _5x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _7x1 == 0)
-            {
-                _6x1 = 1;
-                _7x1 = 12;
-                if (ranout2 <= 66 && ranout2 >= 100 && _5x3 == 0)
-                {
-                    _5x2 = 1;
-                    _5x3 = 12;
-                }
-                _4x1 = 1;
-                _3x1 = 1;
-            }
-            if (ranout >= 34 && ranout <= 66)
-            {
-                if (ranout2 <= 50 && _3x1 == 0)
-                {
-                    _4x1 = 1;
-                    _3x1 = 12;
-                }
-                if (ranout2 >= 50 && _7x1 == 0)
-                {
-                    _6x1 = 1;
-                    _7x1 = 12;
-                }
-                ranout2 = random.Next(1, 100);
-                if (ranout2 <= 34 && _3x1 == 0)
-                {
-                    _4x1 = 1;
-                    _3x1 = 12;
-                }
-                if (ranout2 <= 66 && ranout2 >= 100 && _7x1 == 0)
-                {
-                    _6x1 = 1;
-                    _7x1 = 12;
-                }
-                _5x2 = 1;
-                _5x3 = 1;
-            }
-            if (ranout >= 66)
-            {
-                if (ranout2 <= 50 && _3x1 == 0)
-                {
-                    _4x1 = 1;
-                    _3x1 = 12;
-                }
-                if (ranout2 >= 50 && _5x3 == 0)
-                {
-                    _5x2 = 1;
-                    _5x3 = 12;
-                }
-                ranout2 = random.Next(1, 100);
-                if (ranout2 <= 50 && _3x1 == 0)
-                {
-                    _4x1 = 1;
-                    _3x1 = 12;
-                }
-                if (ranout2 >= 50 && _5x3 == 0)
-                {
-                    _5x2 = 1;
-                    _5x3 = 12;
-                }
-                _6x1 = 1;
-                _7x1 = 1;
-            }
-            if (_5x1 == 1)
-            {
-                _5x1 = 11;
-            }
-            cellcount++;
-        }
-    }
-    if (_5x3 == 10 || _5x3 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x3 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _7x3 == 0)
-            {
-                _6x2 = 1;
-                _7x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
-            {
-                _5x2 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
-            {
-                _5x4 = 1;
-                _5x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _7x3 == 0)
-            {
-                _6x2 = 1;
-                _7x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
-            {
-                _5x2 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
-            {
-                _5x4 = 1;
-                _5x5 = 12;
-            }
-            _4x2 = 1;
-            _3x3 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _3x3 == 0)
-            {
-                _4x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x3 == 0)
-            {
-                _6x2 = 1;
-                _7x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
-            {
-                _5x4 = 1;
-                _5x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x3 == 0)
-            {
-                _4x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x3 == 0)
-            {
-                _6x2 = 1;
-                _7x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
-            {
-                _5x4 = 1;
-                _5x5 = 12;
-            }
-            _5x2 = 1;
-            _5x1 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _3x3 == 0)
-            {
-                _4x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
-            {
-                _5x2 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x3 == 0)
-            {
-                _6x2 = 1;
-                _7x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x3 == 0)
-            {
-                _4x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
-            {
-                _5x2 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x3 == 0)
-            {
-                _6x2 = 1;
-                _7x3 = 12;
-            }
-            _5x4 = 1;
-            _5x5 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _3x3 == 0)
-            {
-                _4x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
-            {
-                _5x2 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
-            {
-                _5x4 = 1;
-                _5x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x3 == 0)
-            {
-                _4x2 = 1;
-                _3x3 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
-            {
-                _5x2 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
-            {
-                _5x4 = 1;
-                _5x5 = 12;
-            }
-            _6x2 = 1;
-            _7x3 = 1;
-        }
-        if (_5x3 == 1)
-        {
-            _5x3 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_5x5 == 10 || _5x5 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x5 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _7x5 == 0)
-            {
-                _6x3 = 1;
-                _7x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
-            {
-                _5x4 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
-            {
-                _5x6 = 1;
-                _5x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _7x5 == 0)
-            {
-                _6x3 = 1;
-                _7x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
-            {
-                _5x4 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
-            {
-                _5x6 = 1;
-                _5x7 = 12;
-            }
-            _4x3 = 1;
-            _3x5 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _3x5 == 0)
-            {
-                _4x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x5 == 0)
-            {
-                _6x3 = 1;
-                _7x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
-            {
-                _5x6 = 1;
-                _5x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x5 == 0)
-            {
-                _4x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x5 == 0)
-            {
-                _6x3 = 1;
-                _7x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
-            {
-                _5x6 = 1;
-                _5x7 = 12;
-            }
-            _5x4 = 1;
-            _5x3 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _3x5 == 0)
-            {
-                _4x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
-            {
-                _5x4 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x5 == 0)
-            {
-                _6x3 = 1;
-                _7x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x5 == 0)
-            {
-                _4x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
-            {
-                _5x4 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x5 == 0)
-            {
-                _6x3 = 1;
-                _7x5 = 12;
-            }
-            _5x6 = 1;
-            _5x7 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _3x5 == 0)
-            {
-                _4x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
-            {
-                _5x4 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
-            {
-                _5x6 = 1;
-                _5x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x5 == 0)
-            {
-                _4x3 = 1;
-                _3x5 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
-            {
-                _5x4 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
-            {
-                _5x6 = 1;
-                _5x7 = 12;
-            }
-            _6x3 = 1;
-            _7x5 = 1;
-        }
-        if (_5x5 == 1)
-        {
-            _5x5 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_5x7 == 10 || _5x7 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x7 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _7x7 == 0)
-            {
-                _6x4 = 1;
-                _7x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
-            {
-                _5x6 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
-            {
-                _5x8 = 1;
-                _5x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _7x7 == 0)
-            {
-                _6x4 = 1;
-                _7x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
-            {
-                _5x6 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
-            {
-                _5x8 = 1;
-                _5x9 = 12;
-            }
-            _4x4 = 1;
-            _3x7 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _3x7 == 0)
-            {
-                _4x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x7 == 0)
-            {
-                _6x4 = 1;
-                _7x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
-            {
-                _5x8 = 1;
-                _5x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x7 == 0)
-            {
-                _4x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x7 == 0)
-            {
-                _6x4 = 1;
-                _7x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
-            {
-                _5x8 = 1;
-                _5x9 = 12;
-            }
-            _5x6 = 1;
-            _5x5 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _3x7 == 0)
-            {
-                _4x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
-            {
-                _5x6 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x7 == 0)
-            {
-                _6x4 = 1;
-                _7x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x7 == 0)
-            {
-                _4x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
-            {
-                _5x6 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x7 == 0)
-            {
-                _6x4 = 1;
-                _7x7 = 12;
-            }
-            _5x8 = 1;
-            _5x9 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _3x7 == 0)
-            {
-                _4x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
-            {
-                _5x6 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
-            {
-                _5x8 = 1;
-                _5x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x7 == 0)
-            {
-                _4x4 = 1;
-                _3x7 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
-            {
-                _5x6 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
-            {
-                _5x8 = 1;
-                _5x9 = 12;
-            }
-            _6x4 = 1;
-            _7x7 = 1;
-        }
-        if (_5x7 == 1)
-        {
-            _5x7 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_5x9 == 10 || _5x9 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x9 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _7x9 == 0)
-            {
-                _6x5 = 1;
-                _7x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
-            {
-                _5x8 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
-            {
-                _5x10 = 1;
-                _5x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _7x9 == 0)
-            {
-                _6x5 = 1;
-                _7x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
-            {
-                _5x8 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
-            {
-                _5x10 = 1;
-                _5x11 = 12;
-            }
-            _4x5 = 1;
-            _3x9 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _3x9 == 0)
-            {
-                _4x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x9 == 0)
-            {
-                _6x5 = 1;
-                _7x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
-            {
-                _5x10 = 1;
-                _5x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x9 == 0)
-            {
-                _4x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x9 == 0)
-            {
-                _6x5 = 1;
-                _7x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
-            {
-                _5x10 = 1;
-                _5x11 = 12;
-            }
-            _5x8 = 1;
-            _5x7 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _3x9 == 0)
-            {
-                _4x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
-            {
-                _5x8 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x9 == 0)
-            {
-                _6x5 = 1;
-                _7x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x9 == 0)
-            {
-                _4x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
-            {
-                _5x8 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x9 == 0)
-            {
-                _6x5 = 1;
-                _7x9 = 12;
-            }
-            _5x10 = 1;
-            _5x11 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _3x9 == 0)
-            {
-                _4x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
-            {
-                _5x8 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
-            {
-                _5x10 = 1;
-                _5x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x9 == 0)
-            {
-                _4x5 = 1;
-                _3x9 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
-            {
-                _5x8 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
-            {
-                _5x10 = 1;
-                _5x11 = 12;
-            }
-            _6x5 = 1;
-            _7x9 = 1;
-        }
-        if (_5x9 == 1)
-        {
-            _5x9 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_5x11 == 10 || _5x11 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x11 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _7x11 == 0)
-            {
-                _6x6 = 1;
-                _7x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
-            {
-                _5x10 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
-            {
-                _5x12 = 1;
-                _5x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _7x11 == 0)
-            {
-                _6x6 = 1;
-                _7x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
-            {
-                _5x10 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
-            {
-                _5x12 = 1;
-                _5x13 = 12;
-            }
-            _4x6 = 1;
-            _3x11 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _3x11 == 0)
-            {
-                _4x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x11 == 0)
-            {
-                _6x6 = 1;
-                _7x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
-            {
-                _5x12 = 1;
-                _5x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x11 == 0)
-            {
-                _4x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x11 == 0)
-            {
-                _6x6 = 1;
-                _7x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
-            {
-                _5x12 = 1;
-                _5x13 = 12;
-            }
-            _5x10 = 1;
-            _5x9 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _3x11 == 0)
-            {
-                _4x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
-            {
-                _5x10 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x11 == 0)
-            {
-                _6x6 = 1;
-                _7x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x11 == 0)
-            {
-                _4x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
-            {
-                _5x10 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x11 == 0)
-            {
-                _6x6 = 1;
-                _7x11 = 12;
-            }
-            _5x12 = 1;
-            _5x13 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _3x11 == 0)
-            {
-                _4x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
-            {
-                _5x10 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
-            {
-                _5x12 = 1;
-                _5x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x11 == 0)
-            {
-                _4x6 = 1;
-                _3x11 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
-            {
-                _5x10 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
-            {
-                _5x12 = 1;
-                _5x13 = 12;
-            }
-            _6x6 = 1;
-            _7x11 = 1;
-        }
-        if (_5x11 == 1)
-        {
-            _5x11 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_5x13 == 10 || _5x13 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x13 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _7x13 == 0)
-            {
-                _6x7 = 1;
-                _7x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
-            {
-                _5x12 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
-            {
-                _5x14 = 1;
-                _5x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _7x13 == 0)
-            {
-                _6x7 = 1;
-                _7x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
-            {
-                _5x12 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
-            {
-                _5x14 = 1;
-                _5x15 = 12;
-            }
-            _4x7 = 1;
-            _3x13 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _3x13 == 0)
-            {
-                _4x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x13 == 0)
-            {
-                _6x7 = 1;
-                _7x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
-            {
-                _5x14 = 1;
-                _5x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x13 == 0)
-            {
-                _4x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x13 == 0)
-            {
-                _6x7 = 1;
-                _7x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
-            {
-                _5x14 = 1;
-                _5x15 = 12;
-            }
-            _5x12 = 1;
-            _5x11 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _3x13 == 0)
-            {
-                _4x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
-            {
-                _5x12 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x13 == 0)
-            {
-                _6x7 = 1;
-                _7x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x13 == 0)
-            {
-                _4x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
-            {
-                _5x12 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x13 == 0)
-            {
-                _6x7 = 1;
-                _7x13 = 12;
-            }
-            _5x14 = 1;
-            _5x15 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _3x13 == 0)
-            {
-                _4x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
-            {
-                _5x12 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
-            {
-                _5x14 = 1;
-                _5x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x13 == 0)
-            {
-                _4x7 = 1;
-                _3x13 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
-            {
-                _5x12 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
-            {
-                _5x14 = 1;
-                _5x15 = 12;
-            }
-            _6x7 = 1;
-            _7x13 = 1;
-        }
-        if (_5x13 == 1)
-        {
-            _5x13 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_5x15 == 10 || _5x15 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x15 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 25)
-        {
-            if (ranout2 <= 34 && _7x15 == 0)
-            {
-                _6x8 = 1;
-                _7x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
-            {
-                _5x14 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
-            {
-                _5x16 = 1;
-                _5x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _7x15 == 0)
-            {
-                _6x8 = 1;
-                _7x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
-            {
-                _5x14 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
-            {
-                _5x16 = 1;
-                _5x17 = 12;
-            }
-            _4x8 = 1;
-            _3x15 = 1;
-        }
-        if (ranout >= 25 && ranout <= 50)
-        {
-            if (ranout2 <= 34 && _3x15 == 0)
-            {
-                _4x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x15 == 0)
-            {
-                _6x8 = 1;
-                _7x15 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
-            {
-                _5x16 = 1;
-                _5x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x15 == 0)
-            {
-                _4x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x15 == 0)
-            {
-                _6x8 = 1;
-                _7x15 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
-            {
-                _5x16 = 1;
-                _5x17 = 12;
-            }
-            _5x14 = 1;
-            _5x13 = 1;
-        }
-        if (ranout >= 50 && ranout <= 75)
-        {
-            if (ranout2 <= 34 && _3x15 == 0)
-            {
-                _4x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
-            {
-                _5x14 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x15 == 0)
-            {
-                _6x8 = 1;
-                _7x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x15 == 0)
-            {
-                _4x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
-            {
-                _5x14 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x15 == 0)
-            {
-                _6x8 = 1;
-                _7x15 = 12;
-            }
-            _5x16 = 1;
-            _5x17 = 1;
-        }
-        if (ranout >= 75)
-        {
-            if (ranout2 <= 34 && _3x15 == 0)
-            {
-                _4x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
-            {
-                _5x14 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
-            {
-                _5x16 = 1;
-                _5x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && _3x15 == 0)
-            {
-                _4x8 = 1;
-                _3x15 = 12;
-            }
-            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
-            {
-                _5x14 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
-            {
-                _5x16 = 1;
-                _5x17 = 12;
-            }
-            _6x8 = 1;
-            _7x15 = 1;
-        }
-        if (_5x15 == 1)
-        {
-            _5x15 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_5x17 == 10 || _5x17 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _5x17 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _7x17 == 0)
-            {
-                _6x9 = 1;
-                _7x17 = 12;
-            }
-            if (ranout2 >= 50 && _5x15 == 0)
-            {
-                _5x16 = 1;
-                _5x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _7x17 == 0)
-            {
-                _6x9 = 1;
-                _7x17 = 12;
-            }
-            if (ranout2 >= 50 && _5x15 == 0)
-            {
-                _5x16 = 1;
-                _5x15 = 12;
-            }
-            _4x9 = 1;
-            _3x17 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _3x17 == 0)
-            {
-                _4x9 = 1;
-                _3x17 = 12;
-            }
-            if (ranout2 >= 50 && _7x17 == 0)
-            {
-                _6x9 = 1;
-                _7x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _3x17 == 0)
-            {
-                _4x9 = 1;
-                _3x17 = 12;
-            }
-            if (ranout2 >= 50 && _7x17 == 0)
-            {
-                _6x9 = 1;
-                _7x17 = 12;
-            }
-            _5x16 = 1;
-            _5x15 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _3x17 == 0)
-            {
-                _4x9 = 1;
-                _3x17 = 12;
-            }
-            if (ranout2 >= 50 && _5x15 == 0)
-            {
-                _5x16 = 1;
-                _5x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _3x17 == 0)
-            {
-                _4x9 = 1;
-                _3x17 = 12;
-            }
-            if (ranout2 >= 50 && _5x15 == 0)
-            {
-                _5x16 = 1;
-                _5x15 = 12;
-            }
-            _6x9 = 1;
-            _7x17 = 1;
-        }
-        if (_5x17 == 1)
-        {
-            _5x17 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x1 == 10 || _7x1 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x1 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 50)
-        {
-            if (ranout2 >= 50 && _7x3 == 0)
-            {
-                _7x2 = 1;
-                _7x3 = 12;
-            }
-            if (ranout2 <= 50 && _7x3 == 0)
-            {
-                _7x2 = 1;
-                _7x3 = 12;
-            }
-            _6x1 = 1;
-            _5x1 = 1;
-        }
-        if (ranout >= 50)
-        {
-            if (ranout2 <= 34 && _5x1 == 0)
-            {
-                _6x1 = 1;
-                _5x1 = 12;
-            }
-            if (ranout2 <= 34 && _5x1 == 0)
-            {
-                _6x1 = 1;
-                _5x1 = 12;
-            }
-            _7x2 = 1;
-            _7x3 = 1;
-        }
-        if (_7x1 == 1)
-        {
-            _7x1 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x3 == 10 || _7x3 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x3 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 >= 50 && _7x1 == 0)
-            {
-                _7x2 = 1;
-                _7x1 = 12;
-            }
-            if (ranout2 <= 50 && _7x5 == 0)
-            {
-                _7x4 = 1;
-                _7x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _7x1 == 0)
-            {
-                _7x2 = 1;
-                _7x1 = 12;
-            }
-            if (ranout2 >= 50 && _7x5 == 0)
-            {
-                _7x4 = 1;
-                _7x5 = 12;
-            }
-            _6x2 = 1;
-            _5x3 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _5x3 == 0)
-            {
-                _6x2 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 >= 50 && _7x5 == 0)
-            {
-                _7x4 = 1;
-                _7x5 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x3 == 0)
-            {
-                _6x2 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 >= 50 && _7x5 == 0)
-            {
-                _7x4 = 1;
-                _7x5 = 12;
-            }
-            _7x2 = 1;
-            _7x1 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _5x3 == 0)
-            {
-                _6x2 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 >= 50 && _7x1 == 0)
-            {
-                _7x2 = 1;
-                _7x1 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x3 == 0)
-            {
-                _6x2 = 1;
-                _5x3 = 12;
-            }
-            if (ranout2 >= 50 && _7x1 == 0)
-            {
-                _7x2 = 1;
-                _7x1 = 12;
-            }
-            _7x4 = 1;
-            _7x5 = 1;
-        }
-        if (_7x3 == 1)
-        {
-            _7x3 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x5 == 10 || _7x5 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x5 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _7x3 == 0)
-            {
-                _7x4 = 1;
-                _7x3 = 12;
-            }
-            if (ranout2 >= 50 && _7x7 == 0)
-            {
-                _7x6 = 1;
-                _7x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _7x3 == 0)
-            {
-                _7x4 = 1;
-                _7x3 = 12;
-            }
-            if (ranout2 >= 50 && _7x7 == 0)
-            {
-                _7x6 = 1;
-                _7x7 = 12;
-            }
-            _6x3 = 1;
-            _5x5 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)                           //////////////////////////////////////
-        {
-            if (ranout2 <= 50 && _5x5 == 0)
-            {
-                _6x3 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 >= 50 && _7x7 == 0)
-            {
-                _7x6 = 1;
-                _7x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x5 == 0)
-            {
-                _6x3 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 >= 50 && _7x7 == 0)
-            {
-                _7x6 = 1;
-                _7x7 = 12;
-            }
-            _7x4 = 1;
-            _7x3 = 1;
-        }
-        if (ranout <= 66)
-        {
-            if (ranout2 <= 50 && _5x5 == 0)
-            {
-                _6x3 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 >= 50 && _7x3 == 0)
-            {
-                _7x4 = 1;
-                _7x3 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x5 == 0)
-            {
-                _6x3 = 1;
-                _5x5 = 12;
-            }
-            if (ranout2 >= 50 && _7x3 == 0)
-            {
-                _7x4 = 1;
-                _7x3 = 12;
-            }
-            _7x6 = 1;
-            _7x7 = 1;
-        }
-        if (_7x5 == 1)
-        {
-            _7x5 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x7 == 10 || _7x7 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x7 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 50)
-        {
-            if (ranout2 >= 50 && _7x5 == 0)
-            {
-                _7x6 = 1;
-                _7x5 = 12;
-            }
-            if (ranout2 <= 50 && _7x9 == 0)
-            {
-                _7x8 = 1;
-                _7x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 >= 50 && _7x5 == 0)
-            {
-                _7x6 = 1;
-                _7x5 = 12;
-            }
-            if (ranout2 <= 50 && _7x9 == 0)
-            {
-                _7x8 = 1;
-                _7x9 = 12;
-            }
-            _6x4 = 1;
-            _5x7 = 1;
-        }
-        if (ranout >= 50)
-        {
-            if (ranout2 <= 50 && _5x7 == 0)
-            {
-                _6x4 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 >= 50 && _7x9 == 0)
-            {
-                _7x8 = 1;
-                _7x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x7 == 0)
-            {
-                _6x4 = 1;
-                _5x7 = 12;
-            }
-            if (ranout2 >= 50 && _7x9 == 0)
-            {
-                _7x8 = 1;
-                _7x9 = 12;
-            }
-            _7x6 = 1;
-            _7x5 = 1;
-        }
-        if (_7x7 == 1)
-        {
-            _7x7 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x9 == 10 || _7x9 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x9 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _7x7 == 0)
-            {
-                _7x8 = 1;
-                _7x7 = 12;
-            }
-            if (ranout2 >= 50 && _7x11 == 0)
-            {
-                _7x10 = 1;
-                _7x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _7x7 == 0)
-            {
-                _7x8 = 1;
-                _7x7 = 12;
-            }
-            if (ranout2 >= 50 && _7x11 == 0)
-            {
-                _7x10 = 1;
-                _7x11 = 12;
-            }
-            _6x5 = 1;
-            _5x9 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _5x9 == 0)
-            {
-                _6x5 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 >= 50 && _7x11 == 0)
-            {
-                _7x10 = 1;
-                _7x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x9 == 0)
-            {
-                _6x5 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 >= 50 && _7x11 == 0)
-            {
-                _7x10 = 1;
-                _7x11 = 12;
-            }
-            _7x8 = 1;
-            _7x7 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _5x9 == 0)
-            {
-                _6x5 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 >= 650 && _7x7 == 0)
-            {
-                _7x8 = 1;
-                _7x7 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x9 == 0)
-            {
-                _6x5 = 1;
-                _5x9 = 12;
-            }
-            if (ranout2 >= 50 && _7x7 == 0)
-            {
-                _7x8 = 1;
-                _7x7 = 12;
-            }
-            _7x10 = 1;
-            _7x11 = 1;
-        }
-        if (_7x9 == 1)
-        {
-            _7x9 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x11 == 10 || _7x11 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x11 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _7x9 == 0)
-            {
-                _7x10 = 1;
-                _7x9 = 12;
-            }
-            if (ranout2 >= 50 && _7x13 == 0)
-            {
-                _7x12 = 1;
-                _7x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 34 && ranout2 >= 66 && _7x9 == 0)
-            {
-                _7x10 = 1;
-                _7x9 = 12;
-            }
-            if (ranout2 <= 66 && ranout2 >= 100 && _7x13 == 0)
-            {
-                _7x12 = 1;
-                _7x13 = 12;
-            }
-            _6x6 = 1;
-            _5x11 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _5x11 == 0)
-            {
-                _6x6 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 >= 50 && _7x13 == 0)
-            {
-                _7x12 = 1;
-                _7x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x11 == 0)
-            {
-                _6x6 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 >= 50 && _7x13 == 0)
-            {
-                _7x12 = 1;
-                _7x13 = 12;
-            }
-            _7x10 = 1;
-            _7x9 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _5x11 == 0)
-            {
-                _6x6 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 >= 50 && _7x9 == 0)
-            {
-                _7x10 = 1;
-                _7x9 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x11 == 0)
-            {
-                _6x6 = 1;
-                _5x11 = 12;
-            }
-            if (ranout2 >= 50 && _7x9 == 0)
-            {
-                _7x10 = 1;
-                _7x9 = 12;
-            }
-            _7x12 = 1;
-            _7x13 = 1;
-        }
-        if (_7x11 == 1)
-        {
-            _7x11 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x13 == 10 || _7x13 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x13 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _7x11 == 0)
-            {
-                _7x12 = 1;
-                _7x11 = 12;
-            }
-            if (ranout2 >= 50 && _7x15 == 0)
-            {
-                _7x14 = 1;
-                _7x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _7x11 == 0)
-            {
-                _7x12 = 1;
-                _7x11 = 12;
-            }
-            if (ranout2 >= 50 && _7x15 == 0)
-            {
-                _7x14 = 1;
-                _7x15 = 12;
-            }
-            _6x7 = 1;
-            _5x13 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _5x13 == 0)
-            {
-                _6x7 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 >= 50 && _7x15 == 0)
-            {
-                _7x14 = 1;
-                _7x15 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x13 == 0)
-            {
-                _6x7 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 >= 50 && _7x15 == 0)
-            {
-                _7x14 = 1;
-                _7x15 = 12;
-            }
-            _7x12 = 1;
-            _7x11 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _5x13 == 0)
-            {
-                _6x7 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 >= 50 && _7x11 == 0)
-            {
-                _7x12 = 1;
-                _7x11 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x13 == 0)
-            {
-                _6x7 = 1;
-                _5x13 = 12;
-            }
-            if (ranout2 >= 50 && _7x11 == 0)
-            {
-                _7x12 = 1;
-                _7x11 = 12;
-            }
-            _7x14 = 1;
-            _7x15 = 1;
-        }
-        if (_7x13 == 1)
-        {
-            _7x13 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x15 == 10 || _7x15 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x15 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 34)
-        {
-            if (ranout2 <= 50 && _7x13 == 0)
-            {
-                _7x14 = 1;
-                _7x13 = 12;
-            }
-            if (ranout2 >= 50 && _7x17 == 0)
-            {
-                _7x16 = 1;
-                _7x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _7x13 == 0)
-            {
-                _7x14 = 1;
-                _7x13 = 12;
-            }
-            if (ranout2 >= 50 && _7x17 == 0)
-            {
-                _7x16 = 1;
-                _7x17 = 12;
-            }
-            _6x8 = 1;
-            _5x15 = 1;
-        }
-        if (ranout >= 34 && ranout <= 66)
-        {
-            if (ranout2 <= 50 && _5x15 == 0)
-            {
-                _6x8 = 1;
-                _5x15 = 12;
-            }
-            if (ranout2 >= 50 && _7x17 == 0)
-            {
-                _7x16 = 1;
-                _7x17 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x15 == 0)
-            {
-                _6x8 = 1;
-                _5x15 = 12;
-            }
-            if (ranout2 >= 50 && _7x17 == 0)
-            {
-                _7x16 = 1;
-                _7x17 = 12;
-            }
-            _7x14 = 1;
-            _7x13 = 1;
-        }
-        if (ranout >= 66)
-        {
-            if (ranout2 <= 50 && _5x15 == 0)
-            {
-                _6x8 = 1;
-                _5x15 = 12;
-            }
-            if (ranout2 >= 50 && _7x13 == 0)
-            {
-                _7x14 = 1;
-                _7x13 = 12;
-            }
-            ranout2 = random.Next(1, 100);
-            if (ranout2 <= 50 && _5x15 == 0)
-            {
-                _6x8 = 1;
-                _5x15 = 12;
-            }
-            if (ranout2 >= 50 && _7x13 == 0)
-            {
-                _7x14 = 1;
-                _7x13 = 12;
-            }
-            _7x16 = 1;
-            _7x17 = 1;
-        }
-        if (_7x15 == 1)
-        {
-            _7x15 = 11;
-        }
-        cellcount++;
-    }
-
-    if (_7x17 == 10 || _7x17 == 1)
-    {
-        if (ranout4 == cellcount)
-        {
-            _7x17 = 5;
-            break;
-        }
-        Random random = new Random();
-        int ranout = random.Next(1, 100);
-        int ranout2 = random.Next(1, 100);
-        if (ranout <= 50)
-        {
-            if (ranout2 <= 50 && _7x15 == 0)
-            {
-                _7x16 = 1;
-                _7x15 = 12;
-            }
-            if (ranout2 >= 50 && _7x15 == 0)
-            {
-                _7x16 = 1;
-                _7x15 = 12;
-            }
-            _6x9 = 1;
-            _5x17 = 1;
-        }
-        if (ranout <= 50)
-        {
-            if (ranout2 <= 50 && _5x17 == 0)
-            {
-                _6x9 = 1;
-                _5x17 = 12;
-            }
-            if (ranout2 >= 50 && _5x17 == 0)
-            {
-                _6x9 = 1;
-                _5x17 = 12;
-            }
-            _7x16 = 1;
-            _7x15 = 1;
-        }
-        if (_7x17 == 1)
-        {
-            _7x17 = 11;
-        }
-        cellcount++;
-    }
+//while (cellgen)
+//{
+//    Random random4 = new Random();
+//    int ranout4 = random4.Next(2, 25);
 
 
+//    if (_1x1 == 10 || _1x1 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x1 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _3x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _3x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _1x3 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _3x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _3x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _1x3 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x3 = 12;
+//            }
+//            _2x1 = 1;
+//            _1x1 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _1x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _3x1 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _1x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 >= 150 && _3x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _3x1 = 12;
+//            }
+//            _1x2 = 1;
+//            _1x3 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _1x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _1x3 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _1x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _1x3 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x3 = 12;
+//            }
+//            _2x1 = 1;
+//            _3x1 = 1;
+//        }
+//        if (_1x1 == 1)
+//        {
+//            _1x1 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_1x3 == 10 || _1x3 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x3 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _3x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x5 = 12;
+//            }
+//            _2x2 = 1;
+//            _1x3 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x5 = 12;
+//            }
+//            _1x2 = 1;
+//            _1x1 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _3x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _3x3 = 12;
+//            }
+//            _1x4 = 1;
+//            _1x5 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x1 == 0)
+//            {
+//                _1x2 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x5 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x5 = 12;
+//            }
+//            _2x2 = 1;
+//            _3x3 = 1;
+//        }
+//        if (_1x3 == 1)
+//        {
+//            _1x3 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_1x5 == 10 || _1x5 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x5 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _3x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x7 = 12;
+//            }
+//            _2x3 = 1;
+//            _1x5 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x7 = 12;
+//            }
+//            _1x4 = 1;
+//            _1x3 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _3x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _3x5 = 12;
+//            }
+//            _1x6 = 1;
+//            _1x7 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x3 == 0)
+//            {
+//                _1x4 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x7 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x7 = 12;
+//            }
+//            _2x3 = 1;
+//            _3x5 = 1;
+//        }
+//        if (_1x5 == 1)
+//        {
+//            _1x5 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_1x7 == 10 || _1x7 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x7 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _3x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x9 = 12;
+//            }
+//            _2x4 = 1;
+//            _1x7 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x9 = 12;
+//            }
+//            _1x6 = 1;
+//            _1x5 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _3x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _3x7 = 12;
+//            }
+//            _1x8 = 1;
+//            _1x9 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x5 == 0)
+//            {
+//                _1x6 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x9 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x9 = 12;
+//            }
+//            _2x4 = 1;
+//            _3x7 = 1;
+//        }
+//        if (_1x7 == 1)
+//        {
+//            _1x7 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_1x9 == 10 || _1x9 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x9 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _3x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x11 = 12;
+//            }
+//            _2x5 = 1;
+//            _1x9 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x11 = 12;
+//            }
+//            _1x8 = 1;
+//            _1x7 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _3x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _3x9 = 12;
+//            }
+//            _1x10 = 1;
+//            _1x11 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x7 == 0)
+//            {
+//                _1x8 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x11 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x11 = 12;
+//            }
+//            _2x5 = 1;
+//            _3x9 = 1;
+//        }
+//        if (_1x9 == 1)
+//        {
+//            _1x9 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_1x11 == 10 || _1x11 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x11 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _3x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x13 = 12;
+//            }
+//            _2x6 = 1;
+//            _1x11 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x13 = 12;
+//            }
+//            _1x10 = 1;
+//            _1x9 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _3x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _3x11 = 12;
+//            }
+//            _1x12 = 1;
+//            _1x13 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x9 == 0)
+//            {
+//                _1x10 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x13 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x13 = 12;
+//            }
+//            _2x6 = 1;
+//            _3x11 = 1;
+//        }
+//        if (_1x11 == 1)
+//        {
+//            _1x11 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_1x13 == 10 || _1x13 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x13 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _3x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x15 = 12;
+//            }
+//            _2x7 = 1;
+//            _1x13 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x15 = 12;
+//            }
+//            _1x12 = 1;
+//            _1x11 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _3x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _3x13 = 12;
+//            }
+//            _1x14 = 1;
+//            _1x15 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x11 == 0)
+//            {
+//                _1x12 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x15 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x15 = 12;
+//            }
+//            _2x7 = 1;
+//            _3x13 = 1;
+//        }
+//        if (_1x13 == 1)
+//        {
+//            _1x13 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_1x15 == 10 || _1x15 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x15 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _3x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x17 = 12;
+//            }
+//            _2x8 = 1;
+//            _1x15 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x17 = 12;
+//            }
+//            _1x14 = 1;
+//            _1x13 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _3x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _3x15 = 12;
+//            }
+//            _1x16 = 1;
+//            _1x17 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _1x13 == 0)
+//            {
+//                _1x14 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _1x17 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x17 = 12;
+//            }
+//            _2x8 = 1;
+//            _3x15 = 1;
+//        }
+//        if (_1x15 == 1)
+//        {
+//            _1x15 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_1x17 == 10 || _1x17 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _1x17 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _3x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _3x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _1x15 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _3x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _3x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _1x15 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x15 = 12;
+//            }
+//            _2x9 = 1;
+//            _1x17 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _1x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _1x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _3x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _1x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _1x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _3x17 = 12;
+//            }
+//            _1x16 = 1;
+//            _1x15 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _1x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _1x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _1x15 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _1x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _1x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _1x15 == 0)
+//            {
+//                _1x16 = 1;
+//                _1x15 = 12;
+//            }
+//            _2x9 = 1;
+//            _3x17 = 1;
+//        }
+//        if (_1x17 == 1)
+//        {
+//            _1x17 = 11;
+//        }
+//        cellcount++;
+//    }
+//    // coridors done from here                                                                            //////////////////////
+//    if (_3x1 == 10 || _3x1 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x1 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _5x1 == 0)
+//            {
+//                _4x1 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x3 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x1 == 0)
+//            {
+//                _4x1 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x3 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x3 = 12;
+//            }
+//            _2x1 = 1;
+//            _1x1 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _1x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x1 == 0)
+//            {
+//                _4x1 = 1;
+//                _5x1 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _1x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x1 == 0)
+//            {
+//                _4x1 = 1;
+//                _5x1 = 12;
+//            }
+//            _3x2 = 1;
+//            _3x3 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _1x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x3 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _1x1 == 0)
+//            {
+//                _2x1 = 1;
+//                _1x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x3 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x3 = 12;
+//            }
+//            _4x1 = 1;
+//            _5x1 = 1;
+//        }
+//        if (_3x1 == 1)
+//        {
+//            _3x1 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_3x3 == 10 || _3x3 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x3 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _5x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _5x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x5 = 12;
+//            }
+//            _2x2 = 1;
+//            _1x3 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x5 = 12;
+//            }
+//            _3x2 = 1;
+//            _3x1 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _5x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _5x3 = 12;
+//            }
+//            _3x4 = 1;
+//            _3x5 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x3 == 0)
+//            {
+//                _2x2 = 1;
+//                _1x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x1 == 0)
+//            {
+//                _3x2 = 1;
+//                _3x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x5 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x5 = 12;
+//            }
+//            _4x2 = 1;
+//            _5x3 = 1;
+//        }
+//        if (_3x3 == 1)
+//        {
+//            _3x3 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_3x5 == 10 || _3x5 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x5 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _5x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _5x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x7 = 12;
+//            }
+//            _2x3 = 1;
+//            _1x5 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x7 = 12;
+//            }
+//            _3x4 = 1;
+//            _3x3 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _5x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _5x5 = 12;
+//            }
+//            _3x6 = 1;
+//            _3x7 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x5 == 0)
+//            {
+//                _2x3 = 1;
+//                _1x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x3 == 0)
+//            {
+//                _3x4 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x7 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x7 = 12;
+//            }
+//            _4x3 = 1;
+//            _5x5 = 1;
+//        }
+//        if (_3x5 == 1)
+//        {
+//            _3x5 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_3x7 == 10 || _3x7 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x7 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _5x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _5x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x9 = 12;
+//            }
+//            _2x4 = 1;
+//            _1x7 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x9 = 12;
+//            }
+//            _3x6 = 1;
+//            _3x5 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _5x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _5x7 = 12;
+//            }
+//            _3x8 = 1;
+//            _3x9 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x7 == 0)
+//            {
+//                _2x4 = 1;
+//                _1x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x5 == 0)
+//            {
+//                _3x6 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x9 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x9 = 12;
+//            }
+//            _4x4 = 1;
+//            _5x7 = 1;
+//        }
+//        if (_3x7 == 1)
+//        {
+//            _3x7 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_3x9 == 10 || _3x9 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x9 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _5x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _5x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x11 = 12;
+//            }
+//            _2x5 = 1;
+//            _1x9 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x11 = 12;
+//            }
+//            _3x8 = 1;
+//            _3x7 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _5x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _5x9 = 12;
+//            }
+//            _3x10 = 1;
+//            _3x11 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x9 == 0)
+//            {
+//                _2x5 = 1;
+//                _1x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x7 == 0)
+//            {
+//                _3x8 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x11 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x11 = 12;
+//            }
+//            _4x5 = 1;
+//            _5x9 = 1;
+//        }
+//        if (_3x9 == 1)
+//        {
+//            _3x9 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_3x11 == 10 || _3x11 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x11 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _5x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _5x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x13 = 12;
+//            }
+//            _2x6 = 1;
+//            _1x11 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x13 = 12;
+//            }
+//            _3x10 = 1;
+//            _3x9 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _5x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _5x11 = 12;
+//            }
+//            _3x12 = 1;
+//            _3x13 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x11 == 0)
+//            {
+//                _2x6 = 1;
+//                _1x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x9 == 0)
+//            {
+//                _3x10 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x13 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x13 = 12;
+//            }
+//            _4x6 = 1;
+//            _5x11 = 1;
+//        }
+//        if (_3x11 == 1)
+//        {
+//            _3x11 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_3x13 == 10 || _3x13 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x13 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _5x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _5x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x15 = 12;
+//            }
+//            _2x7 = 1;
+//            _1x13 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x15 = 12;
+//            }
+//            _3x12 = 1;
+//            _3x11 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _5x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _5x13 = 12;
+//            }
+//            _3x14 = 1;
+//            _3x15 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x13 == 0)
+//            {
+//                _2x7 = 1;
+//                _1x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x11 == 0)
+//            {
+//                _3x12 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x15 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x15 = 12;
+//            }
+//            _4x7 = 1;
+//            _5x13 = 1;
+//        }
+//        if (_3x13 == 1)
+//        {
+//            _3x13 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_3x15 == 10 || _3x15 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x15 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _5x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _5x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _5x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _5x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x17 = 12;
+//            }
+//            _2x8 = 1;
+//            _1x15 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _5x15 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _5x15 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x17 = 12;
+//            }
+//            _3x14 = 1;
+//            _3x13 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _5x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _5x15 = 12;
+//            }
+//            _3x16 = 1;
+//            _3x17 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _1x15 == 0)
+//            {
+//                _2x8 = 1;
+//                _1x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _3x13 == 0)
+//            {
+//                _3x14 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _3x17 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x17 = 12;
+//            }
+//            _4x8 = 1;
+//            _5x15 = 1;
+//        }
+//        if (_3x15 == 1)
+//        {
+//            _3x15 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_3x17 == 10 || _3x17 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _3x17 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _5x17 == 0)
+//            {
+//                _4x9 = 1;
+//                _5x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x15 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x17 == 0)
+//            {
+//                _4x9 = 1;
+//                _5x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x15 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x15 = 12;
+//            }
+//            _2x9 = 1;
+//            _1x17 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 34 && _1x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _1x17 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x17 == 0)
+//            {
+//                _4x9 = 1;
+//                _5x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _1x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _1x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x17 == 0)
+//            {
+//                _4x9 = 1;
+//                _5x17 = 12;
+//            }
+//            _3x16 = 1;
+//            _3x15 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _1x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _1x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _3x15 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _1x17 == 0)
+//            {
+//                _2x9 = 1;
+//                _1x17 = 12;
+//            }
+//            if (ranout2 >= 650 && _3x15 == 0)
+//            {
+//                _3x16 = 1;
+//                _3x15 = 12;
+//            }
+//            _4x9 = 1;
+//            _5x17 = 1;
+//        }
+//        if (_3x17 == 1)
+//        {
+//            _3x17 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_5x1 == 10 || _5x1 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x1 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _7x1 == 0)
+//            {
+//                _6x1 = 1;
+//                _7x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x3 == 0)
+//            {
+//                _5x2 = 1;
+//                _5x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _7x1 == 0)
+//            {
+//                _6x1 = 1;
+//                _7x1 = 12;
+//                if (ranout2 <= 66 && ranout2 >= 100 && _5x3 == 0)
+//                {
+//                    _5x2 = 1;
+//                    _5x3 = 12;
+//                }
+//                _4x1 = 1;
+//                _3x1 = 1;
+//            }
+//            if (ranout >= 34 && ranout <= 66)
+//            {
+//                if (ranout2 <= 50 && _3x1 == 0)
+//                {
+//                    _4x1 = 1;
+//                    _3x1 = 12;
+//                }
+//                if (ranout2 >= 50 && _7x1 == 0)
+//                {
+//                    _6x1 = 1;
+//                    _7x1 = 12;
+//                }
+//                ranout2 = random.Next(1, 100);
+//                if (ranout2 <= 34 && _3x1 == 0)
+//                {
+//                    _4x1 = 1;
+//                    _3x1 = 12;
+//                }
+//                if (ranout2 <= 66 && ranout2 >= 100 && _7x1 == 0)
+//                {
+//                    _6x1 = 1;
+//                    _7x1 = 12;
+//                }
+//                _5x2 = 1;
+//                _5x3 = 1;
+//            }
+//            if (ranout >= 66)
+//            {
+//                if (ranout2 <= 50 && _3x1 == 0)
+//                {
+//                    _4x1 = 1;
+//                    _3x1 = 12;
+//                }
+//                if (ranout2 >= 50 && _5x3 == 0)
+//                {
+//                    _5x2 = 1;
+//                    _5x3 = 12;
+//                }
+//                ranout2 = random.Next(1, 100);
+//                if (ranout2 <= 50 && _3x1 == 0)
+//                {
+//                    _4x1 = 1;
+//                    _3x1 = 12;
+//                }
+//                if (ranout2 >= 50 && _5x3 == 0)
+//                {
+//                    _5x2 = 1;
+//                    _5x3 = 12;
+//                }
+//                _6x1 = 1;
+//                _7x1 = 1;
+//            }
+//            if (_5x1 == 1)
+//            {
+//                _5x1 = 11;
+//            }
+//            cellcount++;
+//        }
+//    }
+//    if (_5x3 == 10 || _5x3 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x3 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _7x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _7x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
+//            {
+//                _5x2 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _7x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _7x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
+//            {
+//                _5x2 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x5 = 12;
+//            }
+//            _4x2 = 1;
+//            _3x3 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _3x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _7x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _7x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x5 = 12;
+//            }
+//            _5x2 = 1;
+//            _5x1 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _3x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
+//            {
+//                _5x2 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _7x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
+//            {
+//                _5x2 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _7x3 = 12;
+//            }
+//            _5x4 = 1;
+//            _5x5 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _3x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
+//            {
+//                _5x2 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x3 == 0)
+//            {
+//                _4x2 = 1;
+//                _3x3 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x1 == 0)
+//            {
+//                _5x2 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x5 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x5 = 12;
+//            }
+//            _6x2 = 1;
+//            _7x3 = 1;
+//        }
+//        if (_5x3 == 1)
+//        {
+//            _5x3 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_5x5 == 10 || _5x5 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x5 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _7x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _7x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _7x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _7x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x7 = 12;
+//            }
+//            _4x3 = 1;
+//            _3x5 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _3x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _7x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _7x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x7 = 12;
+//            }
+//            _5x4 = 1;
+//            _5x3 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _3x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _7x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _7x5 = 12;
+//            }
+//            _5x6 = 1;
+//            _5x7 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _3x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x5 == 0)
+//            {
+//                _4x3 = 1;
+//                _3x5 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x3 == 0)
+//            {
+//                _5x4 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x7 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x7 = 12;
+//            }
+//            _6x3 = 1;
+//            _7x5 = 1;
+//        }
+//        if (_5x5 == 1)
+//        {
+//            _5x5 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_5x7 == 10 || _5x7 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x7 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _7x7 == 0)
+//            {
+//                _6x4 = 1;
+//                _7x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _7x7 == 0)
+//            {
+//                _6x4 = 1;
+//                _7x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x9 = 12;
+//            }
+//            _4x4 = 1;
+//            _3x7 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _3x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x7 == 0)
+//            {
+//                _6x4 = 1;
+//                _7x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x7 == 0)
+//            {
+//                _6x4 = 1;
+//                _7x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x9 = 12;
+//            }
+//            _5x6 = 1;
+//            _5x5 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _3x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x7 == 0)
+//            {
+//                _6x4 = 1;
+//                _7x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x7 == 0)
+//            {
+//                _6x4 = 1;
+//                _7x7 = 12;
+//            }
+//            _5x8 = 1;
+//            _5x9 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _3x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x7 == 0)
+//            {
+//                _4x4 = 1;
+//                _3x7 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x5 == 0)
+//            {
+//                _5x6 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x9 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x9 = 12;
+//            }
+//            _6x4 = 1;
+//            _7x7 = 1;
+//        }
+//        if (_5x7 == 1)
+//        {
+//            _5x7 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_5x9 == 10 || _5x9 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x9 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _7x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _7x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _7x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _7x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x11 = 12;
+//            }
+//            _4x5 = 1;
+//            _3x9 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _3x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _7x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _7x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x11 = 12;
+//            }
+//            _5x8 = 1;
+//            _5x7 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _3x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _7x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _7x9 = 12;
+//            }
+//            _5x10 = 1;
+//            _5x11 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _3x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x9 == 0)
+//            {
+//                _4x5 = 1;
+//                _3x9 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x7 == 0)
+//            {
+//                _5x8 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x11 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x11 = 12;
+//            }
+//            _6x5 = 1;
+//            _7x9 = 1;
+//        }
+//        if (_5x9 == 1)
+//        {
+//            _5x9 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_5x11 == 10 || _5x11 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x11 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _7x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _7x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _7x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _7x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x13 = 12;
+//            }
+//            _4x6 = 1;
+//            _3x11 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _3x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _7x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _7x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x13 = 12;
+//            }
+//            _5x10 = 1;
+//            _5x9 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _3x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _7x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _7x11 = 12;
+//            }
+//            _5x12 = 1;
+//            _5x13 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _3x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x11 == 0)
+//            {
+//                _4x6 = 1;
+//                _3x11 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x9 == 0)
+//            {
+//                _5x10 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x13 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x13 = 12;
+//            }
+//            _6x6 = 1;
+//            _7x11 = 1;
+//        }
+//        if (_5x11 == 1)
+//        {
+//            _5x11 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_5x13 == 10 || _5x13 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x13 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _7x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _7x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _7x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _7x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x15 = 12;
+//            }
+//            _4x7 = 1;
+//            _3x13 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _3x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _7x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _7x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x15 = 12;
+//            }
+//            _5x12 = 1;
+//            _5x11 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _3x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _7x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _7x13 = 12;
+//            }
+//            _5x14 = 1;
+//            _5x15 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _3x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x13 == 0)
+//            {
+//                _4x7 = 1;
+//                _3x13 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x11 == 0)
+//            {
+//                _5x12 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x15 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x15 = 12;
+//            }
+//            _6x7 = 1;
+//            _7x13 = 1;
+//        }
+//        if (_5x13 == 1)
+//        {
+//            _5x13 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_5x15 == 10 || _5x15 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x15 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 25)
+//        {
+//            if (ranout2 <= 34 && _7x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _7x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _7x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _7x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x17 = 12;
+//            }
+//            _4x8 = 1;
+//            _3x15 = 1;
+//        }
+//        if (ranout >= 25 && ranout <= 50)
+//        {
+//            if (ranout2 <= 34 && _3x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _7x15 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _7x15 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x17 = 12;
+//            }
+//            _5x14 = 1;
+//            _5x13 = 1;
+//        }
+//        if (ranout >= 50 && ranout <= 75)
+//        {
+//            if (ranout2 <= 34 && _3x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _7x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _7x15 = 12;
+//            }
+//            _5x16 = 1;
+//            _5x17 = 1;
+//        }
+//        if (ranout >= 75)
+//        {
+//            if (ranout2 <= 34 && _3x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && _3x15 == 0)
+//            {
+//                _4x8 = 1;
+//                _3x15 = 12;
+//            }
+//            if (ranout2 <= 34 && ranout2 >= 66 && _5x13 == 0)
+//            {
+//                _5x14 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _5x17 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x17 = 12;
+//            }
+//            _6x8 = 1;
+//            _7x15 = 1;
+//        }
+//        if (_5x15 == 1)
+//        {
+//            _5x15 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_5x17 == 10 || _5x17 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _5x17 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _7x17 == 0)
+//            {
+//                _6x9 = 1;
+//                _7x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x15 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _7x17 == 0)
+//            {
+//                _6x9 = 1;
+//                _7x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x15 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x15 = 12;
+//            }
+//            _4x9 = 1;
+//            _3x17 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _3x17 == 0)
+//            {
+//                _4x9 = 1;
+//                _3x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x17 == 0)
+//            {
+//                _6x9 = 1;
+//                _7x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _3x17 == 0)
+//            {
+//                _4x9 = 1;
+//                _3x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x17 == 0)
+//            {
+//                _6x9 = 1;
+//                _7x17 = 12;
+//            }
+//            _5x16 = 1;
+//            _5x15 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _3x17 == 0)
+//            {
+//                _4x9 = 1;
+//                _3x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x15 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _3x17 == 0)
+//            {
+//                _4x9 = 1;
+//                _3x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x15 == 0)
+//            {
+//                _5x16 = 1;
+//                _5x15 = 12;
+//            }
+//            _6x9 = 1;
+//            _7x17 = 1;
+//        }
+//        if (_5x17 == 1)
+//        {
+//            _5x17 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x1 == 10 || _7x1 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x1 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 50)
+//        {
+//            if (ranout2 >= 50 && _7x3 == 0)
+//            {
+//                _7x2 = 1;
+//                _7x3 = 12;
+//            }
+//            if (ranout2 <= 50 && _7x3 == 0)
+//            {
+//                _7x2 = 1;
+//                _7x3 = 12;
+//            }
+//            _6x1 = 1;
+//            _5x1 = 1;
+//        }
+//        if (ranout >= 50)
+//        {
+//            if (ranout2 <= 34 && _5x1 == 0)
+//            {
+//                _6x1 = 1;
+//                _5x1 = 12;
+//            }
+//            if (ranout2 <= 34 && _5x1 == 0)
+//            {
+//                _6x1 = 1;
+//                _5x1 = 12;
+//            }
+//            _7x2 = 1;
+//            _7x3 = 1;
+//        }
+//        if (_7x1 == 1)
+//        {
+//            _7x1 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x3 == 10 || _7x3 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x3 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 >= 50 && _7x1 == 0)
+//            {
+//                _7x2 = 1;
+//                _7x1 = 12;
+//            }
+//            if (ranout2 <= 50 && _7x5 == 0)
+//            {
+//                _7x4 = 1;
+//                _7x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _7x1 == 0)
+//            {
+//                _7x2 = 1;
+//                _7x1 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x5 == 0)
+//            {
+//                _7x4 = 1;
+//                _7x5 = 12;
+//            }
+//            _6x2 = 1;
+//            _5x3 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _5x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x5 == 0)
+//            {
+//                _7x4 = 1;
+//                _7x5 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x5 == 0)
+//            {
+//                _7x4 = 1;
+//                _7x5 = 12;
+//            }
+//            _7x2 = 1;
+//            _7x1 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _5x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x1 == 0)
+//            {
+//                _7x2 = 1;
+//                _7x1 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x3 == 0)
+//            {
+//                _6x2 = 1;
+//                _5x3 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x1 == 0)
+//            {
+//                _7x2 = 1;
+//                _7x1 = 12;
+//            }
+//            _7x4 = 1;
+//            _7x5 = 1;
+//        }
+//        if (_7x3 == 1)
+//        {
+//            _7x3 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x5 == 10 || _7x5 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x5 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _7x3 == 0)
+//            {
+//                _7x4 = 1;
+//                _7x3 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x7 == 0)
+//            {
+//                _7x6 = 1;
+//                _7x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _7x3 == 0)
+//            {
+//                _7x4 = 1;
+//                _7x3 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x7 == 0)
+//            {
+//                _7x6 = 1;
+//                _7x7 = 12;
+//            }
+//            _6x3 = 1;
+//            _5x5 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)                           //////////////////////////////////////
+//        {
+//            if (ranout2 <= 50 && _5x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x7 == 0)
+//            {
+//                _7x6 = 1;
+//                _7x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x7 == 0)
+//            {
+//                _7x6 = 1;
+//                _7x7 = 12;
+//            }
+//            _7x4 = 1;
+//            _7x3 = 1;
+//        }
+//        if (ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _5x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x3 == 0)
+//            {
+//                _7x4 = 1;
+//                _7x3 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x5 == 0)
+//            {
+//                _6x3 = 1;
+//                _5x5 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x3 == 0)
+//            {
+//                _7x4 = 1;
+//                _7x3 = 12;
+//            }
+//            _7x6 = 1;
+//            _7x7 = 1;
+//        }
+//        if (_7x5 == 1)
+//        {
+//            _7x5 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x7 == 10 || _7x7 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x7 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 50)
+//        {
+//            if (ranout2 >= 50 && _7x5 == 0)
+//            {
+//                _7x6 = 1;
+//                _7x5 = 12;
+//            }
+//            if (ranout2 <= 50 && _7x9 == 0)
+//            {
+//                _7x8 = 1;
+//                _7x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 >= 50 && _7x5 == 0)
+//            {
+//                _7x6 = 1;
+//                _7x5 = 12;
+//            }
+//            if (ranout2 <= 50 && _7x9 == 0)
+//            {
+//                _7x8 = 1;
+//                _7x9 = 12;
+//            }
+//            _6x4 = 1;
+//            _5x7 = 1;
+//        }
+//        if (ranout >= 50)
+//        {
+//            if (ranout2 <= 50 && _5x7 == 0)
+//            {
+//                _6x4 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x9 == 0)
+//            {
+//                _7x8 = 1;
+//                _7x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x7 == 0)
+//            {
+//                _6x4 = 1;
+//                _5x7 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x9 == 0)
+//            {
+//                _7x8 = 1;
+//                _7x9 = 12;
+//            }
+//            _7x6 = 1;
+//            _7x5 = 1;
+//        }
+//        if (_7x7 == 1)
+//        {
+//            _7x7 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x9 == 10 || _7x9 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x9 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _7x7 == 0)
+//            {
+//                _7x8 = 1;
+//                _7x7 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x11 == 0)
+//            {
+//                _7x10 = 1;
+//                _7x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _7x7 == 0)
+//            {
+//                _7x8 = 1;
+//                _7x7 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x11 == 0)
+//            {
+//                _7x10 = 1;
+//                _7x11 = 12;
+//            }
+//            _6x5 = 1;
+//            _5x9 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _5x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x11 == 0)
+//            {
+//                _7x10 = 1;
+//                _7x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x11 == 0)
+//            {
+//                _7x10 = 1;
+//                _7x11 = 12;
+//            }
+//            _7x8 = 1;
+//            _7x7 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _5x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 >= 650 && _7x7 == 0)
+//            {
+//                _7x8 = 1;
+//                _7x7 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x9 == 0)
+//            {
+//                _6x5 = 1;
+//                _5x9 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x7 == 0)
+//            {
+//                _7x8 = 1;
+//                _7x7 = 12;
+//            }
+//            _7x10 = 1;
+//            _7x11 = 1;
+//        }
+//        if (_7x9 == 1)
+//        {
+//            _7x9 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x11 == 10 || _7x11 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x11 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _7x9 == 0)
+//            {
+//                _7x10 = 1;
+//                _7x9 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x13 == 0)
+//            {
+//                _7x12 = 1;
+//                _7x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 34 && ranout2 >= 66 && _7x9 == 0)
+//            {
+//                _7x10 = 1;
+//                _7x9 = 12;
+//            }
+//            if (ranout2 <= 66 && ranout2 >= 100 && _7x13 == 0)
+//            {
+//                _7x12 = 1;
+//                _7x13 = 12;
+//            }
+//            _6x6 = 1;
+//            _5x11 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _5x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x13 == 0)
+//            {
+//                _7x12 = 1;
+//                _7x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x13 == 0)
+//            {
+//                _7x12 = 1;
+//                _7x13 = 12;
+//            }
+//            _7x10 = 1;
+//            _7x9 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _5x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x9 == 0)
+//            {
+//                _7x10 = 1;
+//                _7x9 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x11 == 0)
+//            {
+//                _6x6 = 1;
+//                _5x11 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x9 == 0)
+//            {
+//                _7x10 = 1;
+//                _7x9 = 12;
+//            }
+//            _7x12 = 1;
+//            _7x13 = 1;
+//        }
+//        if (_7x11 == 1)
+//        {
+//            _7x11 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x13 == 10 || _7x13 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x13 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _7x11 == 0)
+//            {
+//                _7x12 = 1;
+//                _7x11 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x15 == 0)
+//            {
+//                _7x14 = 1;
+//                _7x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _7x11 == 0)
+//            {
+//                _7x12 = 1;
+//                _7x11 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x15 == 0)
+//            {
+//                _7x14 = 1;
+//                _7x15 = 12;
+//            }
+//            _6x7 = 1;
+//            _5x13 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _5x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x15 == 0)
+//            {
+//                _7x14 = 1;
+//                _7x15 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x15 == 0)
+//            {
+//                _7x14 = 1;
+//                _7x15 = 12;
+//            }
+//            _7x12 = 1;
+//            _7x11 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _5x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x11 == 0)
+//            {
+//                _7x12 = 1;
+//                _7x11 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x13 == 0)
+//            {
+//                _6x7 = 1;
+//                _5x13 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x11 == 0)
+//            {
+//                _7x12 = 1;
+//                _7x11 = 12;
+//            }
+//            _7x14 = 1;
+//            _7x15 = 1;
+//        }
+//        if (_7x13 == 1)
+//        {
+//            _7x13 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x15 == 10 || _7x15 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x15 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 34)
+//        {
+//            if (ranout2 <= 50 && _7x13 == 0)
+//            {
+//                _7x14 = 1;
+//                _7x13 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x17 == 0)
+//            {
+//                _7x16 = 1;
+//                _7x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _7x13 == 0)
+//            {
+//                _7x14 = 1;
+//                _7x13 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x17 == 0)
+//            {
+//                _7x16 = 1;
+//                _7x17 = 12;
+//            }
+//            _6x8 = 1;
+//            _5x15 = 1;
+//        }
+//        if (ranout >= 34 && ranout <= 66)
+//        {
+//            if (ranout2 <= 50 && _5x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _5x15 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x17 == 0)
+//            {
+//                _7x16 = 1;
+//                _7x17 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _5x15 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x17 == 0)
+//            {
+//                _7x16 = 1;
+//                _7x17 = 12;
+//            }
+//            _7x14 = 1;
+//            _7x13 = 1;
+//        }
+//        if (ranout >= 66)
+//        {
+//            if (ranout2 <= 50 && _5x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _5x15 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x13 == 0)
+//            {
+//                _7x14 = 1;
+//                _7x13 = 12;
+//            }
+//            ranout2 = random.Next(1, 100);
+//            if (ranout2 <= 50 && _5x15 == 0)
+//            {
+//                _6x8 = 1;
+//                _5x15 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x13 == 0)
+//            {
+//                _7x14 = 1;
+//                _7x13 = 12;
+//            }
+//            _7x16 = 1;
+//            _7x17 = 1;
+//        }
+//        if (_7x15 == 1)
+//        {
+//            _7x15 = 11;
+//        }
+//        cellcount++;
+//    }
+
+//    if (_7x17 == 10 || _7x17 == 1)
+//    {
+//        if (ranout4 == cellcount)
+//        {
+//            _7x17 = 5;
+//            break;
+//        }
+//        Random random = new Random();
+//        int ranout = random.Next(1, 100);
+//        int ranout2 = random.Next(1, 100);
+//        if (ranout <= 50)
+//        {
+//            if (ranout2 <= 50 && _7x15 == 0)
+//            {
+//                _7x16 = 1;
+//                _7x15 = 12;
+//            }
+//            if (ranout2 >= 50 && _7x15 == 0)
+//            {
+//                _7x16 = 1;
+//                _7x15 = 12;
+//            }
+//            _6x9 = 1;
+//            _5x17 = 1;
+//        }
+//        if (ranout <= 50)
+//        {
+//            if (ranout2 <= 50 && _5x17 == 0)
+//            {
+//                _6x9 = 1;
+//                _5x17 = 12;
+//            }
+//            if (ranout2 >= 50 && _5x17 == 0)
+//            {
+//                _6x9 = 1;
+//                _5x17 = 12;
+//            }
+//            _7x16 = 1;
+//            _7x15 = 1;
+//        }
+//        if (_7x17 == 1)
+//        {
+//            _7x17 = 11;
+//        }
+//        cellcount++;
+//    }
 
 
-    if (_1x1 != 1 && _1x3 != 1 && _1x5 != 1 && _1x7 != 1 && _1x9 != 1 && _1x11 != 1 && _1x13 != 1 && _1x15 != 1 && _1x17 != 1 && _3x1 != 1 && _3x3 != 1 && _3x5 != 1 && _3x7 != 1 && _3x9 != 1 && _3x11 != 1 && _3x13 != 1 && _3x15 != 1 && _3x17 != 1 && _5x1 != 1 && _5x3 != 1 && _5x5 != 1 && _5x7 != 1 && _5x9 != 1 && _5x11 != 1 && _5x13 != 1 && _5x15 != 1 && _5x17 != 1 && _7x1 != 1 && _7x3 != 1 && _7x5 != 1 && _7x7 != 1 && _7x9 != 1 && _7x11 != 1 && _7x13 != 1 && _7x15 != 1 && _7x17 != 1)
-    {
-        cellgen = false;
-    }
 
-}
-Console.WriteLine("" + _1x1 + _1x2 + _1x3 + _1x4 + _1x5 + _1x6 + _1x7 + _1x8 + _1x9 + _1x10 + _1x11 + _1x12 + _1x13 + _1x14 + _1x15 + _1x16 + _1x17 + _2x1 + _2x2 + _2x3 + _2x4 + _2x5 + _2x6 + _2x7 + _2x8 + _2x9 + _3x1 + _3x2 + _3x3 + _3x4 + _3x5 + _3x6 + _3x7 + _3x8 + _3x9 + _3x10 + _3x11 + _3x12 + _3x13 + _3x14 + _3x15 + _3x16 + _3x17 + _4x1 + _4x2 + _4x3 + _4x4 + _4x5 + _4x6 + _4x7 + _4x8 + _4x9 + _5x1 + _5x2 + _5x3 + _5x4 + _5x5 + _5x6 + _5x7 + _5x8 + _5x9 + _5x10 + _5x11 + _5x12 + _5x13 + _5x14 + _5x15 + _5x16 + _5x17 + _6x1 + _6x2 + _6x3 + _6x4 + _6x5 + _6x6 + _6x7 + _6x8 + _6x9 + _7x1 + _7x2 + _7x3 + _7x4 + _7x5 + _7x6 + _7x7 + _7x8 + _7x9 + _7x10 + _7x11 + _7x12 + _7x13 + _7x14 + _7x15 + _7x16 + _7x17);
+
+//    if (_1x1 != 1 && _1x3 != 1 && _1x5 != 1 && _1x7 != 1 && _1x9 != 1 && _1x11 != 1 && _1x13 != 1 && _1x15 != 1 && _1x17 != 1 && _3x1 != 1 && _3x3 != 1 && _3x5 != 1 && _3x7 != 1 && _3x9 != 1 && _3x11 != 1 && _3x13 != 1 && _3x15 != 1 && _3x17 != 1 && _5x1 != 1 && _5x3 != 1 && _5x5 != 1 && _5x7 != 1 && _5x9 != 1 && _5x11 != 1 && _5x13 != 1 && _5x15 != 1 && _5x17 != 1 && _7x1 != 1 && _7x3 != 1 && _7x5 != 1 && _7x7 != 1 && _7x9 != 1 && _7x11 != 1 && _7x13 != 1 && _7x15 != 1 && _7x17 != 1)
+//    {
+//        cellgen = false;
+//    }
+
+//}
+//Console.WriteLine("" + _1x1 + _1x2 + _1x3 + _1x4 + _1x5 + _1x6 + _1x7 + _1x8 + _1x9 + _1x10 + _1x11 + _1x12 + _1x13 + _1x14 + _1x15 + _1x16 + _1x17 + _2x1 + _2x2 + _2x3 + _2x4 + _2x5 + _2x6 + _2x7 + _2x8 + _2x9 + _3x1 + _3x2 + _3x3 + _3x4 + _3x5 + _3x6 + _3x7 + _3x8 + _3x9 + _3x10 + _3x11 + _3x12 + _3x13 + _3x14 + _3x15 + _3x16 + _3x17 + _4x1 + _4x2 + _4x3 + _4x4 + _4x5 + _4x6 + _4x7 + _4x8 + _4x9 + _5x1 + _5x2 + _5x3 + _5x4 + _5x5 + _5x6 + _5x7 + _5x8 + _5x9 + _5x10 + _5x11 + _5x12 + _5x13 + _5x14 + _5x15 + _5x16 + _5x17 + _6x1 + _6x2 + _6x3 + _6x4 + _6x5 + _6x6 + _6x7 + _6x8 + _6x9 + _7x1 + _7x2 + _7x3 + _7x4 + _7x5 + _7x6 + _7x7 + _7x8 + _7x9 + _7x10 + _7x11 + _7x12 + _7x13 + _7x14 + _7x15 + _7x16 + _7x17);
 /*
 int _1x1 = 0; //cell
 int _1x2 = 0; //coridor
@@ -5191,7 +5191,22 @@ string fileName = "Test.txt";
 var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Written Dungeon");
 string filepath = System.IO.Path.Combine(path, fileName);
 
-
+DateTime time1 = DateTime.Now;
+//System.Threading.Thread.Sleep(1);
+DateTime time2 = DateTime.Now;
+//int delay = DateTime.Compare(time1, time2);
+long delay = time2.Ticks - time1.Ticks;
+delay = delay / 10000;
+Console.WriteLine(delay);
+delay = (delay - 50) * -1;
+Console.WriteLine(time1);
+Console.WriteLine(time2);
+Console.WriteLine(delay);
+if (delay > 0)
+{
+    System.Threading.Thread.Sleep((Int32)delay);
+}
+Console.WriteLine(delay);
 //int h = 5;
 //float b = 1.5f;
 //h = (int)(h * b);
