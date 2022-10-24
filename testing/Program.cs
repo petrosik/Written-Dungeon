@@ -151,7 +151,12 @@ int _6x7 = 0;
 int _6x9 = 0;
 
 
-
+Console.WriteLine("{0,15}{0,10}{2,10}{3,10}{4,10}",
+  "bla1",
+  "bla2",
+  "bla3",
+  "bla4",
+  "bla5");
 
 
 //while (startcell)
@@ -5163,50 +5168,52 @@ int _7x17 = 0; //cell
 //cell
 
 //writing the int variables for map
-Console.WriteLine("\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                      ██                                " +
-                              "\r\n                                                                                    ██████                              " +
-                              "\r\n                                                                                  ██████████                            " +
-                              "\r\n                                                                                ██████████████                          " +
-                              "\r\n                                                                              ██████████████████                        " +
-                              "\r\n                                                                              ██████████████████                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                      You elevated by  floors                                                            " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                              ░░░░░░░░░░░░░░░░░░                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        " +
-                              "\r\n                                                                                                                        ");
+//Console.WriteLine("\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                      ██                                " +
+//                              "\r\n                                                                                    ██████                              " +
+//                              "\r\n                                                                                  ██████████                            " +
+//                              "\r\n                                                                                ██████████████                          " +
+//                              "\r\n                                                                              ██████████████████                        " +
+//                              "\r\n                                                                              ██████████████████                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                      You elevated by  floors                                                            " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                              ░░░░░░░░░░░░░░░░░░                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        " +
+//                              "\r\n                                                                                                                        ");
 
 string fileName = "Test.txt";
 var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Written Dungeon");
 string filepath = System.IO.Path.Combine(path, fileName);
 
-DateTime time1 = DateTime.Now;
-//System.Threading.Thread.Sleep(1);
-DateTime time2 = DateTime.Now;
-//int delay = DateTime.Compare(time1, time2);
-long delay = time2.Ticks - time1.Ticks;
-delay = delay / 10000;
-Console.WriteLine(delay);
-delay = (delay - 50) * -1;
-Console.WriteLine(time1);
-Console.WriteLine(time2);
-Console.WriteLine(delay);
-if (delay > 0)
-{
-    System.Threading.Thread.Sleep((Int32)delay);
-}
-Console.WriteLine(delay);
+//DateTime time1 = DateTime.Now;
+////System.Threading.Thread.Sleep(1);
+//DateTime time2 = DateTime.Now;
+////int delay = DateTime.Compare(time1, time2);
+//long delay = time2.Ticks - time1.Ticks;
+//delay = delay / 10000;
+//Console.WriteLine(delay);
+//delay = (delay - 50) * -1;
+//Console.WriteLine(time1);
+//Console.WriteLine(time2);
+//Console.WriteLine(delay);
+//if (delay > 0)
+//{
+//    System.Threading.Thread.Sleep((Int32)delay);
+//}
+//Console.WriteLine(delay);
+
+
 //int h = 5;
 //float b = 1.5f;
 //h = (int)(h * b);
@@ -5238,379 +5245,379 @@ Console.WriteLine(delay);
 //int count9 = 1;
 //int count10 = 3;
 
-int cori1 = 0;
-int cori2 = 1;
-int cori3 = 1;
-int cori4 = 0;
-int cori5 = 1;
-int cori6 = 2;
-int cori7 = 2;
-int cori8 = 1;
+//int cori1 = 0;
+//int cori2 = 1;
+//int cori3 = 1;
+//int cori4 = 0;
+//int cori5 = 1;
+//int cori6 = 2;
+//int cori7 = 2;
+//int cori8 = 1;
 
 
-int count = 1;
-int count1 = 1;
-int count2 = 1;
-int count3 = -1;
-int count4 = 1;
-int count5 = 1;
-int count6 = -1;
+//int count = 1;
+//int count1 = 1;
+//int count2 = 1;
+//int count3 = -1;
+//int count4 = 1;
+//int count5 = 1;
+//int count6 = -1;
 
-int count7 = 1;
-int count8 = 3;
-int count9 = 3;
-int count10 = 1;
+//int count7 = 1;
+//int count8 = 3;
+//int count9 = 3;
+//int count10 = 1;
 
-while (count1 <= 7)
-{
-    while (count2 <= 17)
-    {
-        if (cori2 == 10)
-        {
-            cori2 = 1;
-        }
-        if (cori8 == 10)
-        {
-            cori8 = 1;
-        }
-        if (cori4 == 18)
-        {
-            cori4 = 0;
+//while (count1 <= 7)
+//{
+//    while (count2 <= 17)
+//    {
+//        if (cori2 == 10)
+//        {
+//            cori2 = 1;
+//        }
+//        if (cori8 == 10)
+//        {
+//            cori8 = 1;
+//        }
+//        if (cori4 == 18)
+//        {
+//            cori4 = 0;
 
-        }
-        if (cori6 == 18)
-        {
-            cori6 = 4;
-        }
+//        }
+//        if (cori6 == 18)
+//        {
+//            cori6 = 4;
+//        }
 
-        System.IO.File.AppendAllText(filepath, string.Format("{0}",
-              "if (_" + count1 + "x" + count2 + " == 13)\n" +
-             "{\n" +
-             "if (_" + cori7 + "x" + cori8 + " == 1)" +
-             "{\n" +
-             "if (_" + count9 + "x" + count10 + " == 3)\n" +
-             "{\n" +
-             "_" + count9 + "x" + count10 + " = 13;\n" +
-             "battle = true;" +
-             "}\n" +
-             "else if (_" + count9 + "x" + count10 + " == 4)\n" +
-             "{\n" +
-             "_" + count9 + "x" + count10 + " = 13;\n" +
-             "_event = true;" +
-             "}\n" +
-             "else if (_" + count9 + "x" + count10 + " == 5)\n" +
-             "{\n" +
-             "_" + count9 + "x" + count10 + " = 13;\n" +
-             "boss = true;" +
-             "}\n" +
-             "else if (_" + count9 + "x" + count10 + " == 6)\n" +
-             "{\n" +
-             "_" + count9 + "x" + count10 + " = 13;\n" +
-             "shop = true;" +
-             "}\n" +
-             "else if (_" + count9 + "x" + count10 + " == 11)\n" +
-             "{\n" +
-             "_" + count9 + "x" + count10 + " = 13;\n" +
-             "}\n" +
-             "else if (_" + count9 + "x" + count10 + " == 2)\n" +
-             "{\n" +
-             "_" + count9 + "x" + count10 + " = 13;\n" +
-             "}\n" +
-             "_" + count1 + "x" + count2 + " = 2;\n" +
-             "break;\n" +
-             "}\n" +
-             "}\n"
-
-
-
-
-
-
-            // "if (_" + count1 + "x" + count2 + " == 13)\n" +
-            //"{\n" +
-            //"if (_" + cori1 + "x" + cori2 + " == 1)" +
-            //"{\n" +
-            //"if (_" + count3 + "x" + count4 + " == 3)\n" +
-            //"{\n" +
-            //"_" + count3 + "x" + count4 + " = 13;\n" +
-            //"battle = true;" +
-            //"}\n" +
-            //"else if (_" + count3 + "x" + count4 + " == 4)\n" +
-            //"{\n" +
-            //"_" + count3 + "x" + count4 + " = 13;\n" +
-            //"_event = true;" +
-            //"}\n" +
-            //"else if (_" + count3 + "x" + count4 + " == 5)\n" +
-            //"{\n" +
-            //"_" + count3 + "x" + count4 + " = 13;\n" +
-            //"boss = true;" +
-            //"}\n" +
-            //"else if (_" + count3 + "x" + count4 + " == 6)\n" +
-            //"{\n" +
-            //"_" + count3 + "x" + count4 + " = 13;\n" +
-            //"shop = true;" +
-            //"}\n" +
-            //"else if (_" + count3 + "x" + count4 + " == 11)\n" +
-            //"{\n" +
-            //"_" + count3 + "x" + count4 + " = 13;\n" +
-            //"}\n" +
-            //"else if (_" + count3 + "x" + count4 + " == 2)\n" +
-            //"{\n" +
-            //"_" + count3 + "x" + count4 + " = 13;\n" +
-            //"}\n" +
-            //"_" + count1 + "x" + count2 + " = 2;\n" +
-            //"}\n" +
-            //"}\n"
+//        System.IO.File.AppendAllText(filepath, string.Format("{0}",
+//              "if (_" + count1 + "x" + count2 + " == 13)\n" +
+//             "{\n" +
+//             "if (_" + cori7 + "x" + cori8 + " == 1)" +
+//             "{\n" +
+//             "if (_" + count9 + "x" + count10 + " == 3)\n" +
+//             "{\n" +
+//             "_" + count9 + "x" + count10 + " = 13;\n" +
+//             "battle = true;" +
+//             "}\n" +
+//             "else if (_" + count9 + "x" + count10 + " == 4)\n" +
+//             "{\n" +
+//             "_" + count9 + "x" + count10 + " = 13;\n" +
+//             "_event = true;" +
+//             "}\n" +
+//             "else if (_" + count9 + "x" + count10 + " == 5)\n" +
+//             "{\n" +
+//             "_" + count9 + "x" + count10 + " = 13;\n" +
+//             "boss = true;" +
+//             "}\n" +
+//             "else if (_" + count9 + "x" + count10 + " == 6)\n" +
+//             "{\n" +
+//             "_" + count9 + "x" + count10 + " = 13;\n" +
+//             "shop = true;" +
+//             "}\n" +
+//             "else if (_" + count9 + "x" + count10 + " == 11)\n" +
+//             "{\n" +
+//             "_" + count9 + "x" + count10 + " = 13;\n" +
+//             "}\n" +
+//             "else if (_" + count9 + "x" + count10 + " == 2)\n" +
+//             "{\n" +
+//             "_" + count9 + "x" + count10 + " = 13;\n" +
+//             "}\n" +
+//             "_" + count1 + "x" + count2 + " = 2;\n" +
+//             "break;\n" +
+//             "}\n" +
+//             "}\n"
 
 
 
 
-            // "if (_" + count1 + "x" + count2 + " == 13)\n" +
-            //"{\n" +
-            //"if (_" + count9 + "x" + count10 + " == 3)\n" +
-            //"{\n" +
-            //"_" + count9 + "x" + count10 + " = 13;\n" +
-            //"battle = true;" +
-            //"}\n" +
-            //"else if (_" + count9 + "x" + count10 + " == 4)\n" +
-            //"{\n" +
-            //"_event = true;" +
-            //"_" + count9 + "x" + count10 + " = 13;\n" +
-            //"}\n" +
-            //"else if (_" + count9 + "x" + count10 + " == 5)\n" +
-            //"{\n" +
-            //"boss = true;" +
-            //"_" + count9 + "x" + count10 + " = 13;\n" +
-            //"}\n" +
-            //"else if (_" + count9 + "x" + count10 + " == 6)\n" +
-            //"{\n" +
-            //"shop = true;" +
-            //"_" + count9 + "x" + count10 + " = 13;\n" +
-            //"}\n" +
-            //"}\n"
+
+
+//            // "if (_" + count1 + "x" + count2 + " == 13)\n" +
+//            //"{\n" +
+//            //"if (_" + cori1 + "x" + cori2 + " == 1)" +
+//            //"{\n" +
+//            //"if (_" + count3 + "x" + count4 + " == 3)\n" +
+//            //"{\n" +
+//            //"_" + count3 + "x" + count4 + " = 13;\n" +
+//            //"battle = true;" +
+//            //"}\n" +
+//            //"else if (_" + count3 + "x" + count4 + " == 4)\n" +
+//            //"{\n" +
+//            //"_" + count3 + "x" + count4 + " = 13;\n" +
+//            //"_event = true;" +
+//            //"}\n" +
+//            //"else if (_" + count3 + "x" + count4 + " == 5)\n" +
+//            //"{\n" +
+//            //"_" + count3 + "x" + count4 + " = 13;\n" +
+//            //"boss = true;" +
+//            //"}\n" +
+//            //"else if (_" + count3 + "x" + count4 + " == 6)\n" +
+//            //"{\n" +
+//            //"_" + count3 + "x" + count4 + " = 13;\n" +
+//            //"shop = true;" +
+//            //"}\n" +
+//            //"else if (_" + count3 + "x" + count4 + " == 11)\n" +
+//            //"{\n" +
+//            //"_" + count3 + "x" + count4 + " = 13;\n" +
+//            //"}\n" +
+//            //"else if (_" + count3 + "x" + count4 + " == 2)\n" +
+//            //"{\n" +
+//            //"_" + count3 + "x" + count4 + " = 13;\n" +
+//            //"}\n" +
+//            //"_" + count1 + "x" + count2 + " = 2;\n" +
+//            //"}\n" +
+//            //"}\n"
 
 
 
 
-            // "if (ranout4 == cellcount)\n" +
-            // "{\n" +
-            //     "_" + count1 + "x" + count2 + " = 5;\n" +
-            //     "break;\n" +
-            // "}\n" +
-            // "Random random = new Random();\n" +
-            // "int ranout = random.Next(1, 100);\n" +
-            // "int ranout2 = random.Next(1, 100);\n" +
-            // "if (ranout <= 25)\n" +
-            // "{\n" +
-            //"if (ranout2 <= 34 && _" + count6 + "x" + count5 + " == 0)\n" +  //runout needs double selection for 2 dead ends per tile
-            //"{\n" +
-            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
-            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +                     //also needs conections(coridors) generated aswell
-            //"}\n" +
-            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
-            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
-            //"}\n" +
-            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
-            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
-            //"}\n" +
-            //"ranout2 = random.Next(1, 100);\n" +
-            //"if (ranout2 <= 34 && _" + count6 + "x" + count5 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
-            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
-            //"}\n" +
-            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
-            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
-            //"}\n" +
-            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
-            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
-            //"}\n" +
+//            // "if (_" + count1 + "x" + count2 + " == 13)\n" +
+//            //"{\n" +
+//            //"if (_" + count9 + "x" + count10 + " == 3)\n" +
+//            //"{\n" +
+//            //"_" + count9 + "x" + count10 + " = 13;\n" +
+//            //"battle = true;" +
+//            //"}\n" +
+//            //"else if (_" + count9 + "x" + count10 + " == 4)\n" +
+//            //"{\n" +
+//            //"_event = true;" +
+//            //"_" + count9 + "x" + count10 + " = 13;\n" +
+//            //"}\n" +
+//            //"else if (_" + count9 + "x" + count10 + " == 5)\n" +
+//            //"{\n" +
+//            //"boss = true;" +
+//            //"_" + count9 + "x" + count10 + " = 13;\n" +
+//            //"}\n" +
+//            //"else if (_" + count9 + "x" + count10 + " == 6)\n" +
+//            //"{\n" +
+//            //"shop = true;" +
+//            //"_" + count9 + "x" + count10 + " = 13;\n" +
+//            //"}\n" +
+//            //"}\n"
 
 
-            //"_" + cori1 + "x" + cori2 + "= 1;\n" +
-            //"_" + count3 + "x" + count4 + " = 1;" + "\n" +
-            //"}\n" +
-            //"if (ranout >= 25 && ranout <= 50)\n" +
-            // "{\n" +
-            //"if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
-            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
-            //"}\n" +
-            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count6 + "x" + count5 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
-            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
-            //"}\n" +
-            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
-            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
-            //"}\n" +
-            //"ranout2 = random.Next(1, 100);\n" +
-            // "if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
-            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
-            //"}\n" +
-            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count6 + "x" + count5 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
-            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
-            //"}\n" +
-            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
-            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
-            //"}\n" +
 
 
-            //"_" + cori3 + "x" + cori4 + "= 1;\n" +
-            // "_" + count7 + "x" + count8 + " = 1;" + "\n" +
-            // "}\n" +
-            // "if (ranout >= 50 && ranout <= 75)\n" +
-            // "{\n" +
-            //"if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
-            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
-            //"}\n" +
-            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
-            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
-            //"}\n" +
-            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count6 + "x" + count5 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
-            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
-            //"}\n" +
-            //"ranout2 = random.Next(1, 100);\n" +
-            //"if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
-            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
-            //"}\n" +
-            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
-            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
-            //"}\n" +
-            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count6 + "x" + count5 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
-            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
-            //"}\n" +
+//            // "if (ranout4 == cellcount)\n" +
+//            // "{\n" +
+//            //     "_" + count1 + "x" + count2 + " = 5;\n" +
+//            //     "break;\n" +
+//            // "}\n" +
+//            // "Random random = new Random();\n" +
+//            // "int ranout = random.Next(1, 100);\n" +
+//            // "int ranout2 = random.Next(1, 100);\n" +
+//            // "if (ranout <= 25)\n" +
+//            // "{\n" +
+//            //"if (ranout2 <= 34 && _" + count6 + "x" + count5 + " == 0)\n" +  //runout needs double selection for 2 dead ends per tile
+//            //"{\n" +
+//            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
+//            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +                     //also needs conections(coridors) generated aswell
+//            //"}\n" +
+//            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
+//            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
+//            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"ranout2 = random.Next(1, 100);\n" +
+//            //"if (ranout2 <= 34 && _" + count6 + "x" + count5 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
+//            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
+//            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
+//            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
+//            //"}\n" +
 
 
-            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
-            // "_" + count9 + "x" + count10 + " = 1;" + "\n" +
-            // "}\n" +
-            // "if (ranout >= 75)\n" +
-            // "{\n" +
-            //"if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
-            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
-            //"}\n" +
-            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
-            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
-            //"}\n" +
-            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
-            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
-            //"}\n" +
-            //"ranout2 = random.Next(1, 100);\n" +
-            // "if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
-            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
-            //"}\n" +
-            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
-            //"{\n" +
-            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
-            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
-            //"}\n" +
-            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
-            //"{\n" +
-            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
-            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
-            //"}\n" +
+//            //"_" + cori1 + "x" + cori2 + "= 1;\n" +
+//            //"_" + count3 + "x" + count4 + " = 1;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout >= 25 && ranout <= 50)\n" +
+//            // "{\n" +
+//            //"if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
+//            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count6 + "x" + count5 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
+//            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
+//            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"ranout2 = random.Next(1, 100);\n" +
+//            // "if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
+//            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count6 + "x" + count5 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
+//            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
+//            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
+//            //"}\n" +
 
 
-            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
-            // "_" + count6 + "x" + count5 + " = 1;" + "\n" +
-            // "}\n" +
-            // "if (_" + count1 + "x" + count2 + "== 1)\n" +
-            // "{\n" +
-            // "_" + count1 + "x" + count2 + "= 11;\n" +
-            // "}\n" +
-            // "cellcount++;" +
-            // "}\n\n"
-            ));
-        Console.WriteLine();
-        count++;
-        count2++;
-        count2++;
-        count4++;
-        count4++;
-        count6++;
-        count6++;
-        count8++;
-        count8++;
-        count10++;
-        count10++;
-        cori2++;
-        cori4++;
-        cori6++;
-        cori6++;
-        cori4++;
-        cori8++;
-    }
-    count1++;
-    count1++;
-    count3++;
-    count3++;
-    count5++;
-    count5++;
-    count7++;
-    count7++;
-    count9++;
-    count9++;
-    count2 = 1;
-    count4 = 1;
-    count6 = -1;
-    count8 = 3;
-    count10 = 1;
-    //count4 = 1;
-    cori2 = 1;
-    cori4 = 0;
-    cori6 = 2;
-    cori8 = 1;
-    //count2 = 1;
-    //count8 = -1;
-    //count10 = 3;
-    //count5 = 1;
-    cori1++;
-    cori3++;
-    cori5++;
-    cori7++;
-    cori1++;
-    cori3++;
-    cori5++;
-    cori7++;
-}
+//            //"_" + cori3 + "x" + cori4 + "= 1;\n" +
+//            // "_" + count7 + "x" + count8 + " = 1;" + "\n" +
+//            // "}\n" +
+//            // "if (ranout >= 50 && ranout <= 75)\n" +
+//            // "{\n" +
+//            //"if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
+//            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
+//            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count6 + "x" + count5 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
+//            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"ranout2 = random.Next(1, 100);\n" +
+//            //"if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
+//            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
+//            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count6 + "x" + count5 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
+//            //"_" + count6 + "x" + count5 + " = 12;" + "\n" +
+//            //"}\n" +
+
+
+//            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
+//            // "_" + count9 + "x" + count10 + " = 1;" + "\n" +
+//            // "}\n" +
+//            // "if (ranout >= 75)\n" +
+//            // "{\n" +
+//            //"if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
+//            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
+//            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
+//            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"ranout2 = random.Next(1, 100);\n" +
+//            // "if (ranout2 <= 34 && _" + count3 + "x" + count4 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori1 + "x" + cori2 + "= 1;\n" +
+//            //"_" + count3 + "x" + count4 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //  "if (ranout2 <= 34 && ranout2 >= 66 && _" + count7 + "x" + count8 + " == 0)\n" +
+//            //"{\n" +
+//            // "_" + cori3 + "x" + cori4 + "= 1;\n" +
+//            //"_" + count7 + "x" + count8 + " = 12;" + "\n" +
+//            //"}\n" +
+//            //"if (ranout2 <= 66 && ranout2 >= 100 && _" + count9 + "x" + count10 + " == 0)\n" +
+//            //"{\n" +
+//            //"_" + cori5 + "x" + cori6 + "= 1;\n" +
+//            //"_" + count9 + "x" + count10 + " = 12;" + "\n" +
+//            //"}\n" +
+
+
+//            //"_" + cori7 + "x" + cori8 + "= 1;\n" +
+//            // "_" + count6 + "x" + count5 + " = 1;" + "\n" +
+//            // "}\n" +
+//            // "if (_" + count1 + "x" + count2 + "== 1)\n" +
+//            // "{\n" +
+//            // "_" + count1 + "x" + count2 + "= 11;\n" +
+//            // "}\n" +
+//            // "cellcount++;" +
+//            // "}\n\n"
+//            ));
+//        Console.WriteLine();
+//        count++;
+//        count2++;
+//        count2++;
+//        count4++;
+//        count4++;
+//        count6++;
+//        count6++;
+//        count8++;
+//        count8++;
+//        count10++;
+//        count10++;
+//        cori2++;
+//        cori4++;
+//        cori6++;
+//        cori6++;
+//        cori4++;
+//        cori8++;
+//    }
+//    count1++;
+//    count1++;
+//    count3++;
+//    count3++;
+//    count5++;
+//    count5++;
+//    count7++;
+//    count7++;
+//    count9++;
+//    count9++;
+//    count2 = 1;
+//    count4 = 1;
+//    count6 = -1;
+//    count8 = 3;
+//    count10 = 1;
+//    //count4 = 1;
+//    cori2 = 1;
+//    cori4 = 0;
+//    cori6 = 2;
+//    cori8 = 1;
+//    //count2 = 1;
+//    //count8 = -1;
+//    //count10 = 3;
+//    //count5 = 1;
+//    cori1++;
+//    cori3++;
+//    cori5++;
+//    cori7++;
+//    cori1++;
+//    cori3++;
+//    cori5++;
+//    cori7++;
+//}
 
 //int count1 = 3;
 //int count2 = 1;

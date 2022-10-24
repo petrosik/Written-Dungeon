@@ -7,6 +7,7 @@ using static System.Net.WebRequestMethods;
 using System;
 using System.Reflection;
 using System.Security.AccessControl;
+using System.Runtime.ExceptionServices;
 
 Console.WriteLine("Initialization...");
 
@@ -39,7 +40,9 @@ bool population1 = true;
 bool player = true;
 bool battle = false;
 bool enemygen = false;
+bool battleprep = false;
 bool turn = false;
+bool playerturn = true;
 bool _event = false;
 bool shop = false;
 bool boss = false;
@@ -55,10 +58,12 @@ int cellcount = 0;
 int generror = 0;
 int pos = 1;
 int saveloaded = 0; // active save file
+int loadcheck = 0;
 int savestate = 0; //savestate
 int chosg = 0; //secondary controls
 int chosg1 = 10; //main controls
 int chosg2 = 0; //player controls
+int chosg3 = 0; //enemy choose controls
 int set1 = 0; //health
 int set2 = 0; // gold
 int set3 = 0; // exp
@@ -90,26 +95,25 @@ int slot3 = 0;
 //13
 //14
 //15
-// id = array index, { health, strg, crit chance, gold, exp}
-int[,] enemystats = new int[10, 5] { { 10, 5, 10, 5, 1 }, { 50, 10, 15, 25, 5 }, { 100, 0, 0, 500, 100 }, { 75, 30, 5, 50, 10 }, { 150, 2, 0, 10, 2 }, { 300, 25, 20, 200, 50 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
-// id = array index, { health, strg, crit chance, gold, exp}
-int[,] spenemystats = new int[5, 5] { { 150, 30, 5, 250, 20 }, { 500, 25, 30, 750, 150 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
+// id = array index, { health, strg, crit chance, gold, exp, heal}
+int[,] enemystats = new int[10, 6] { { 10, 5, 10, 5, 1, 3 }, { 50, 10, 15, 25, 5, 5 }, { 100, 0, 0, 500, 100, 0 }, { 75, 30, 5, 50, 10, 10 }, { 150, 2, 0, 10, 2, 25 }, { 300, 25, 20, 200, 50, 50 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 } };
+// id = array index, { health, strg, crit chance, gold, exp, heal}
+int[,] spenemystats = new int[5, 6] { { 150, 30, 5, 250, 20, 10 }, { 500, 25, 30, 750, 150, 100 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 } };
 // current battle state or for save
-// id ,health, strg, crit chance, gold, exp, applied special effect(poison, etc)
-int[,] battlelog = new int[4, 7];
+// id ,health, strg, crit chance, gold, exp, heal, applied special effect(poison, etc)
+int[,] battlelog = new int[4, 8];
 
 string[,] names = new string[2, 16] { { "Empty", "Slime", "Skeleton", "Spawner", "Troll", "Tree", "Golem", "", "", "", "", "Mimic", "Boss", "", "", "" }, { "", "Living blob of slime", "Pile of bones that became alive", "Spawner can spawn upto 4 random mobs", "Trolls are usually under bridges idk what he's doing here", "Tree!", "Golems are bulky but can hit like a truck", "", "", "", "", "", "", "", "", "" } };
 
-//1, id, dmg, crit chance, special effect id
-int[] weaponpreset = new int[] { 1, 1, 1, 1, 1 };
-//2, id, defence, durability, empty
-int[] armorpreset = new int[] { 1, 1, 1, 1, 1 };
-//3, id, defence, durability, effect id
-int[] shieldpreset = new int[] { 1, 1, 1, 1, 1 };
-//4, id,( effect id, effect id2) empty, empty, empty
-int[] itempreset = new int[] { 1, 1, 1, 1, 1 };
+//1, dmg, crit chance, special effect id
+//2, defence, durability, empty, empty
+//3, defence, durability, effect id, empty
+//4, id, ( effect id, effect id2) empty, empty, empty
+
+int[,,] inventorystats = new int[4, 10, 4] { { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } } };
+
 //type, id, index1, index2, index3, index4
-int[] inventorylog = new int[] { 0, 0 };
+int[,] inventorylog = new int[2,10];
 
 float fset1 = 0;
 string eventrender = "\r\n                                                                                                                        " +
@@ -136,6 +140,7 @@ string eventrender = "\r\n                                                      
                           "\r\n                                                                                                                        " +
                           "\r\n                                                                                                                        ";
 string tempfilepath = "";
+string loadchecktemp = "";
 // coord for map
 int _1x1 = 0;
 int _1x2 = 0;
@@ -631,16 +636,18 @@ while (true)
                                                   System.IO.FileShare.ReadWrite);
         var file = new System.IO.StreamReader(filestream, System.Text.Encoding.UTF8, true, 128);
         string temp;
+        int monster = 0;
+        int nbt = 0;
+        int nbt1 = 0;
+        int invspace = 0;
         while ((temp = file.ReadLine()) != null)
         {
             //Do something with the lineOfText
             string substring;
-            //int useless = 0;
             int startIndex = 0;
             int length = 6;
             while (true)
             {
-
                 if (temp == "none")
                 {
                     Console.WriteLine("                                                This file is empty\n\r                                            [3] Change Generation settings");
@@ -648,6 +655,7 @@ while (true)
                     genloop = true;
                     firstgen = true;
                     genreset = true;
+                    loadchecktemp = temp;
                     //System.Threading.Thread.Sleep(500);
                     break;
                 }
@@ -657,6 +665,7 @@ while (true)
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set1);
                     Console.WriteLine($"                                               Health:{set1}");
+                    loadcheck++;
                     break;
                 }
                 else if (substring == "gold__")
@@ -664,6 +673,7 @@ while (true)
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set2);
                     Console.WriteLine($"                                               Gold:{set2}");
+                    loadcheck++;
                     break;
                 }
                 else if (substring == "exp___")
@@ -671,6 +681,7 @@ while (true)
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set3);
                     Console.WriteLine($"                                               Exp:{set3}");
+                    loadcheck++;
                     break;
                 }
                 else if (substring == "kills_")
@@ -685,15 +696,17 @@ while (true)
                     startIndex = temp.IndexOf(":");
                     int.TryParse(temp.Substring(startIndex + 1), out set5);
                     Console.WriteLine($"                                               Floor:{set5}");
+                    loadcheck++;
                     break;
                 }
-                //else if (substring == "stage_")
-                //{
-                //    startIndex = temp.IndexOf(":");
-                //    int.TryParse(temp.Substring(startIndex + 1), out set6);
-                //    Console.WriteLine("                                               Stage:" + set6);
-                //    break;
-                //}
+                else if (substring == "presti")
+                {
+                    startIndex = temp.IndexOf(":");
+                    int.TryParse(temp.Substring(startIndex + 1), out set6);
+                    Console.WriteLine("                                               Prestige:" + set6);
+                    loadcheck++;
+                    break;
+                }
                 else if (substring == "stagen")
                 {
                     //Console.WriteLine(temp);
@@ -1172,9 +1185,36 @@ while (true)
                     {
                         int.TryParse(temp.Substring(startIndex + 1), out _7x17);
                         pos++;
+                        loadcheck++;
                     }
                     //int.TryParse(temp.Substring(startIndex + 1), out gene);
                     //Console.WriteLine("stagen:" + slot1);
+                    break;
+                }
+                else if (substring == "batlog")
+                {
+                    startIndex = temp.IndexOf(":");
+                    int.TryParse(temp.Substring(startIndex + 1), out battlelog[monster, nbt]);
+                    if (nbt == 7)
+                    {
+                        monster++;
+                        nbt = -1;
+                        loadcheck++;
+                    }
+                    nbt++;
+                    break;
+                }
+                else if (substring == "invlog")
+                {
+                    startIndex = temp.IndexOf(":");
+                    int.TryParse(temp.Substring(startIndex + 1), out inventorylog[invspace, nbt1]);
+                    if (nbt1 == 9)
+                    {
+                        monster++;
+                        nbt1 = -1;
+                        loadcheck++;
+                    }
+                    nbt1++;
                     break;
                 }
                 else if (substring == "Empty_")
@@ -1194,13 +1234,25 @@ while (true)
                 else if (true)
                 {
                     Console.WriteLine("Error 1");
+                    loadcheck++;
+                    break;
                 }
                 //break;
             }
         }
-        Console.WriteLine("\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n                                                      Load?\n\r                                                     [1] Yes\n\r                                                     [2] No");
+
+        // current needed 12
+        if (loadcheck != 12 && loadchecktemp != "none")
+        {
+            Console.Clear();
+            Console.WriteLine("\n\r\n\r\n\r\n\r\n\r                                            Key information could not load...\n\r                                                     Shutting down");
+            System.Threading.Thread.Sleep(5000);
+            Environment.Exit(0);
+        }
+
+        Console.WriteLine("\n\r\n\r\n\r\n\r\n\r\n                                                      Load?\n\r                                                     [1] Yes\n\r                                                     [2] No");
         Console.WriteLine("\n\r\n\r\n\r\n\r\n\r\n------------------------------------------------------------------------------------------------------------------------\n\r" +
-                    "   [1] Numpad 1  |  [2] Numpad 2  |  [2] Numpad 2  |  [Back] Backspace\n\r" +
+                    "   [1] Numpad 1  |  [2] Numpad 2  |  [3] Numpad 3  |  [Back] Backspace\n\r" +
                     "------------------------------------------------------------------------------------------------------------------------");
         //gameloop = true;
         switch (Console.ReadKey().Key)
@@ -1209,6 +1261,14 @@ while (true)
                 uniload = true;
                 load = false;
                 gameloop = true;
+                if (battlelog[0, 0] != 0)
+                {
+                    rendermap = false;
+                    playerturn = true;
+                    player = false;
+                    battle = true;
+                    turn = true;
+                }
                 break;
             case ConsoleKey.NumPad2:
                 load = false;
@@ -1342,11 +1402,12 @@ while (true)
         //bar + ".";
         count++;
         DateTime t2 = DateTime.Now;
-        long loaddelay = ((t2.Ticks - t1.Ticks) / 10000) * -1;
+        long loaddelay = (((t2.Ticks - t1.Ticks) / 10000) * -1) + 45;
         if (loaddelay > 0)
         {
             System.Threading.Thread.Sleep((Int32)loaddelay);
         }
+        System.Threading.Thread.Sleep(5);
     }
 
     while (genloop) //generation loop st 4
@@ -7754,12 +7815,20 @@ while (true)
             writetext.Write("");
         }
         System.IO.File.AppendAllText(tempfilepath, string.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}",
-            "health:" + set1 + "\n", "gold__:" + set2 + "\n", "exp___:" + set3 + "\n", "kills_:" + set4 + "\n", "floor_:" + set5 + "\n", "Empty_:" + set6 + "\n", "Empty_:" + set7 + "\n", "Empty_:" + set8 + "\n", "Empty_:" + set9 + "\n",
-            "slot1_:" + slot1 + "\n"));
+            $"health:{set1}\n", $"gold__:{set2}\n", $"exp___:{set3}\n", $"kills_:{set4}\n", $"floor_:{set5}\n", $"presti:{set6}\n", $"Empty_:{set7}\n", $"Empty_:{set8}\n", $"Empty_:{set9}\n",
+            $"slot1_:{slot1}\n"));
         int[] strcoords = new int[] { _1x1, _1x2, _1x3, _1x4, _1x5, _1x6, _1x7, _1x8, _1x9, _1x10, _1x11, _1x12, _1x13, _1x14, _1x15, _1x16, _1x17, _2x1, _2x2, _2x3, _2x4, _2x5, _2x6, _2x7, _2x8, _2x9, _3x1, _3x2, _3x3, _3x4, _3x5, _3x6, _3x7, _3x8, _3x9, _3x10, _3x11, _3x12, _3x13, _3x14, _3x15, _3x16, _3x17, _4x1, _4x2, _4x3, _4x4, _4x5, _4x6, _4x7, _4x8, _4x9, _5x1, _5x2, _5x3, _5x4, _5x5, _5x6, _5x7, _5x8, _5x9, _5x10, _5x11, _5x12, _5x13, _5x14, _5x15, _5x16, _5x17, _6x1, _6x2, _6x3, _6x4, _6x5, _6x6, _6x7, _6x8, _6x9, _7x1, _7x2, _7x3, _7x4, _7x5, _7x6, _7x7, _7x8, _7x9, _7x10, _7x11, _7x12, _7x13, _7x14, _7x15, _7x16, _7x17 };
         foreach (int i in strcoords)
         {
-            System.IO.File.AppendAllText(tempfilepath, string.Format("{0}", "stagen:" + i + "\n"));
+            System.IO.File.AppendAllText(tempfilepath, string.Format("{0}", $"stagen:{i}\n"));
+        }
+        foreach (int i in battlelog)
+        {
+            System.IO.File.AppendAllText(tempfilepath, string.Format("{0}", $"batlog:{i}\n"));
+        }
+        foreach (int i in inventorylog)
+        {
+            System.IO.File.AppendAllText(tempfilepath, string.Format("{0}", $"invlog:{i}\n"));
         }
         if (savestate == 1)
         {
@@ -7786,6 +7855,15 @@ while (true)
         {
             gameloop = true;
             rendermap = true;
+            save = false;
+        }
+        else if (savestate == 6)
+        {
+            gameloop = true;
+            battle = true;
+            turn = true;
+            playerturn = true;
+            enemygen = false;
             save = false;
         }
         else
@@ -10533,7 +10611,7 @@ while (true)
                         if (_1x1 == 3)
                         {
                             _1x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x1 == 4)
                         {
@@ -10570,7 +10648,7 @@ while (true)
                         if (_1x3 == 3)
                         {
                             _1x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x3 == 4)
                         {
@@ -10607,7 +10685,7 @@ while (true)
                         if (_1x5 == 3)
                         {
                             _1x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x5 == 4)
                         {
@@ -10644,7 +10722,7 @@ while (true)
                         if (_1x7 == 3)
                         {
                             _1x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x7 == 4)
                         {
@@ -10681,7 +10759,7 @@ while (true)
                         if (_1x9 == 3)
                         {
                             _1x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x9 == 4)
                         {
@@ -10718,7 +10796,7 @@ while (true)
                         if (_1x11 == 3)
                         {
                             _1x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x11 == 4)
                         {
@@ -10755,7 +10833,7 @@ while (true)
                         if (_1x13 == 3)
                         {
                             _1x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x13 == 4)
                         {
@@ -10792,7 +10870,7 @@ while (true)
                         if (_1x15 == 3)
                         {
                             _1x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x15 == 4)
                         {
@@ -10829,7 +10907,7 @@ while (true)
                         if (_1x17 == 3)
                         {
                             _1x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x17 == 4)
                         {
@@ -10866,7 +10944,7 @@ while (true)
                         if (_3x1 == 3)
                         {
                             _3x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x1 == 4)
                         {
@@ -10903,7 +10981,7 @@ while (true)
                         if (_3x3 == 3)
                         {
                             _3x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x3 == 4)
                         {
@@ -10940,7 +11018,7 @@ while (true)
                         if (_3x5 == 3)
                         {
                             _3x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x5 == 4)
                         {
@@ -10977,7 +11055,7 @@ while (true)
                         if (_3x7 == 3)
                         {
                             _3x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x7 == 4)
                         {
@@ -11014,7 +11092,7 @@ while (true)
                         if (_3x9 == 3)
                         {
                             _3x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x9 == 4)
                         {
@@ -11051,7 +11129,7 @@ while (true)
                         if (_3x11 == 3)
                         {
                             _3x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x11 == 4)
                         {
@@ -11088,7 +11166,7 @@ while (true)
                         if (_3x13 == 3)
                         {
                             _3x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x13 == 4)
                         {
@@ -11125,7 +11203,7 @@ while (true)
                         if (_3x15 == 3)
                         {
                             _3x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x15 == 4)
                         {
@@ -11162,7 +11240,7 @@ while (true)
                         if (_3x17 == 3)
                         {
                             _3x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x17 == 4)
                         {
@@ -11199,7 +11277,7 @@ while (true)
                         if (_5x1 == 3)
                         {
                             _5x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x1 == 4)
                         {
@@ -11236,7 +11314,7 @@ while (true)
                         if (_5x3 == 3)
                         {
                             _5x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x3 == 4)
                         {
@@ -11273,7 +11351,7 @@ while (true)
                         if (_5x5 == 3)
                         {
                             _5x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x5 == 4)
                         {
@@ -11310,7 +11388,7 @@ while (true)
                         if (_5x7 == 3)
                         {
                             _5x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x7 == 4)
                         {
@@ -11347,7 +11425,7 @@ while (true)
                         if (_5x9 == 3)
                         {
                             _5x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x9 == 4)
                         {
@@ -11384,7 +11462,7 @@ while (true)
                         if (_5x11 == 3)
                         {
                             _5x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x11 == 4)
                         {
@@ -11421,7 +11499,7 @@ while (true)
                         if (_5x13 == 3)
                         {
                             _5x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x13 == 4)
                         {
@@ -11458,7 +11536,7 @@ while (true)
                         if (_5x15 == 3)
                         {
                             _5x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x15 == 4)
                         {
@@ -11495,7 +11573,7 @@ while (true)
                         if (_5x17 == 3)
                         {
                             _5x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x17 == 4)
                         {
@@ -11536,7 +11614,7 @@ while (true)
                         if (_1x1 == 3)
                         {
                             _1x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x1 == 4)
                         {
@@ -11573,7 +11651,7 @@ while (true)
                         if (_1x3 == 3)
                         {
                             _1x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x3 == 4)
                         {
@@ -11610,7 +11688,7 @@ while (true)
                         if (_1x5 == 3)
                         {
                             _1x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x5 == 4)
                         {
@@ -11647,7 +11725,7 @@ while (true)
                         if (_1x7 == 3)
                         {
                             _1x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x7 == 4)
                         {
@@ -11684,7 +11762,7 @@ while (true)
                         if (_1x9 == 3)
                         {
                             _1x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x9 == 4)
                         {
@@ -11721,7 +11799,7 @@ while (true)
                         if (_1x11 == 3)
                         {
                             _1x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x11 == 4)
                         {
@@ -11758,7 +11836,7 @@ while (true)
                         if (_1x13 == 3)
                         {
                             _1x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x13 == 4)
                         {
@@ -11795,7 +11873,7 @@ while (true)
                         if (_1x15 == 3)
                         {
                             _1x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x15 == 4)
                         {
@@ -11832,7 +11910,7 @@ while (true)
                         if (_3x1 == 3)
                         {
                             _3x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x1 == 4)
                         {
@@ -11869,7 +11947,7 @@ while (true)
                         if (_3x3 == 3)
                         {
                             _3x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x3 == 4)
                         {
@@ -11906,7 +11984,7 @@ while (true)
                         if (_3x5 == 3)
                         {
                             _3x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x5 == 4)
                         {
@@ -11943,7 +12021,7 @@ while (true)
                         if (_3x7 == 3)
                         {
                             _3x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x7 == 4)
                         {
@@ -11980,7 +12058,7 @@ while (true)
                         if (_3x9 == 3)
                         {
                             _3x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x9 == 4)
                         {
@@ -12017,7 +12095,7 @@ while (true)
                         if (_3x11 == 3)
                         {
                             _3x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x11 == 4)
                         {
@@ -12054,7 +12132,7 @@ while (true)
                         if (_3x13 == 3)
                         {
                             _3x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x13 == 4)
                         {
@@ -12091,7 +12169,7 @@ while (true)
                         if (_3x15 == 3)
                         {
                             _3x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x15 == 4)
                         {
@@ -12128,7 +12206,7 @@ while (true)
                         if (_5x1 == 3)
                         {
                             _5x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x1 == 4)
                         {
@@ -12165,7 +12243,7 @@ while (true)
                         if (_5x3 == 3)
                         {
                             _5x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x3 == 4)
                         {
@@ -12202,7 +12280,7 @@ while (true)
                         if (_5x5 == 3)
                         {
                             _5x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x5 == 4)
                         {
@@ -12239,7 +12317,7 @@ while (true)
                         if (_5x7 == 3)
                         {
                             _5x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x7 == 4)
                         {
@@ -12276,7 +12354,7 @@ while (true)
                         if (_5x9 == 3)
                         {
                             _5x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x9 == 4)
                         {
@@ -12313,7 +12391,7 @@ while (true)
                         if (_5x11 == 3)
                         {
                             _5x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x11 == 4)
                         {
@@ -12350,7 +12428,7 @@ while (true)
                         if (_5x13 == 3)
                         {
                             _5x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x13 == 4)
                         {
@@ -12387,7 +12465,7 @@ while (true)
                         if (_5x15 == 3)
                         {
                             _5x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x15 == 4)
                         {
@@ -12424,7 +12502,7 @@ while (true)
                         if (_7x1 == 3)
                         {
                             _7x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x1 == 4)
                         {
@@ -12461,7 +12539,7 @@ while (true)
                         if (_7x3 == 3)
                         {
                             _7x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x3 == 4)
                         {
@@ -12498,7 +12576,7 @@ while (true)
                         if (_7x5 == 3)
                         {
                             _7x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x5 == 4)
                         {
@@ -12535,7 +12613,7 @@ while (true)
                         if (_7x7 == 3)
                         {
                             _7x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x7 == 4)
                         {
@@ -12572,7 +12650,7 @@ while (true)
                         if (_7x9 == 3)
                         {
                             _7x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x9 == 4)
                         {
@@ -12609,7 +12687,7 @@ while (true)
                         if (_7x11 == 3)
                         {
                             _7x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x11 == 4)
                         {
@@ -12646,7 +12724,7 @@ while (true)
                         if (_7x13 == 3)
                         {
                             _7x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x13 == 4)
                         {
@@ -12683,7 +12761,7 @@ while (true)
                         if (_7x15 == 3)
                         {
                             _7x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x15 == 4)
                         {
@@ -12724,7 +12802,7 @@ while (true)
                         if (_1x3 == 3)
                         {
                             _1x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x3 == 4)
                         {
@@ -12760,7 +12838,7 @@ while (true)
                         if (_1x5 == 3)
                         {
                             _1x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x5 == 4)
                         {
@@ -12796,7 +12874,7 @@ while (true)
                         if (_1x7 == 3)
                         {
                             _1x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x7 == 4)
                         {
@@ -12832,7 +12910,7 @@ while (true)
                         if (_1x9 == 3)
                         {
                             _1x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x9 == 4)
                         {
@@ -12868,7 +12946,7 @@ while (true)
                         if (_1x11 == 3)
                         {
                             _1x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x11 == 4)
                         {
@@ -12904,7 +12982,7 @@ while (true)
                         if (_1x13 == 3)
                         {
                             _1x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x13 == 4)
                         {
@@ -12940,7 +13018,7 @@ while (true)
                         if (_1x15 == 3)
                         {
                             _1x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x15 == 4)
                         {
@@ -12976,7 +13054,7 @@ while (true)
                         if (_1x17 == 3)
                         {
                             _1x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_1x17 == 4)
                         {
@@ -13012,7 +13090,7 @@ while (true)
                         if (_3x3 == 3)
                         {
                             _3x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x3 == 4)
                         {
@@ -13048,7 +13126,7 @@ while (true)
                         if (_3x5 == 3)
                         {
                             _3x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x5 == 4)
                         {
@@ -13084,7 +13162,7 @@ while (true)
                         if (_3x7 == 3)
                         {
                             _3x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x7 == 4)
                         {
@@ -13120,7 +13198,7 @@ while (true)
                         if (_3x9 == 3)
                         {
                             _3x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x9 == 4)
                         {
@@ -13156,7 +13234,7 @@ while (true)
                         if (_3x11 == 3)
                         {
                             _3x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x11 == 4)
                         {
@@ -13192,7 +13270,7 @@ while (true)
                         if (_3x13 == 3)
                         {
                             _3x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x13 == 4)
                         {
@@ -13228,7 +13306,7 @@ while (true)
                         if (_3x15 == 3)
                         {
                             _3x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x15 == 4)
                         {
@@ -13264,7 +13342,7 @@ while (true)
                         if (_3x17 == 3)
                         {
                             _3x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x17 == 4)
                         {
@@ -13300,7 +13378,7 @@ while (true)
                         if (_5x3 == 3)
                         {
                             _5x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x3 == 4)
                         {
@@ -13336,7 +13414,7 @@ while (true)
                         if (_5x5 == 3)
                         {
                             _5x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x5 == 4)
                         {
@@ -13372,7 +13450,7 @@ while (true)
                         if (_5x7 == 3)
                         {
                             _5x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x7 == 4)
                         {
@@ -13408,7 +13486,7 @@ while (true)
                         if (_5x9 == 3)
                         {
                             _5x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x9 == 4)
                         {
@@ -13444,7 +13522,7 @@ while (true)
                         if (_5x11 == 3)
                         {
                             _5x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x11 == 4)
                         {
@@ -13480,7 +13558,7 @@ while (true)
                         if (_5x13 == 3)
                         {
                             _5x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x13 == 4)
                         {
@@ -13516,7 +13594,7 @@ while (true)
                         if (_5x15 == 3)
                         {
                             _5x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x15 == 4)
                         {
@@ -13552,7 +13630,7 @@ while (true)
                         if (_5x17 == 3)
                         {
                             _5x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x17 == 4)
                         {
@@ -13588,7 +13666,7 @@ while (true)
                         if (_7x3 == 3)
                         {
                             _7x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x3 == 4)
                         {
@@ -13624,7 +13702,7 @@ while (true)
                         if (_7x5 == 3)
                         {
                             _7x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x5 == 4)
                         {
@@ -13660,7 +13738,7 @@ while (true)
                         if (_7x7 == 3)
                         {
                             _7x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x7 == 4)
                         {
@@ -13696,7 +13774,7 @@ while (true)
                         if (_7x9 == 3)
                         {
                             _7x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x9 == 4)
                         {
@@ -13732,7 +13810,7 @@ while (true)
                         if (_7x11 == 3)
                         {
                             _7x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x11 == 4)
                         {
@@ -13768,7 +13846,7 @@ while (true)
                         if (_7x13 == 3)
                         {
                             _7x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x13 == 4)
                         {
@@ -13804,7 +13882,7 @@ while (true)
                         if (_7x15 == 3)
                         {
                             _7x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x15 == 4)
                         {
@@ -13840,7 +13918,7 @@ while (true)
                         if (_7x17 == 3)
                         {
                             _7x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x17 == 4)
                         {
@@ -13880,7 +13958,7 @@ while (true)
                         if (_3x1 == 3)
                         {
                             _3x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x1 == 4)
                         {
@@ -13916,7 +13994,7 @@ while (true)
                         if (_3x3 == 3)
                         {
                             _3x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x3 == 4)
                         {
@@ -13952,7 +14030,7 @@ while (true)
                         if (_3x5 == 3)
                         {
                             _3x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x5 == 4)
                         {
@@ -13988,7 +14066,7 @@ while (true)
                         if (_3x7 == 3)
                         {
                             _3x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x7 == 4)
                         {
@@ -14024,7 +14102,7 @@ while (true)
                         if (_3x9 == 3)
                         {
                             _3x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x9 == 4)
                         {
@@ -14060,7 +14138,7 @@ while (true)
                         if (_3x11 == 3)
                         {
                             _3x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x11 == 4)
                         {
@@ -14096,7 +14174,7 @@ while (true)
                         if (_3x13 == 3)
                         {
                             _3x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x13 == 4)
                         {
@@ -14132,7 +14210,7 @@ while (true)
                         if (_3x15 == 3)
                         {
                             _3x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x15 == 4)
                         {
@@ -14168,7 +14246,7 @@ while (true)
                         if (_3x17 == 3)
                         {
                             _3x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_3x17 == 4)
                         {
@@ -14204,7 +14282,7 @@ while (true)
                         if (_5x1 == 3)
                         {
                             _5x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x1 == 4)
                         {
@@ -14240,7 +14318,7 @@ while (true)
                         if (_5x3 == 3)
                         {
                             _5x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x3 == 4)
                         {
@@ -14276,7 +14354,7 @@ while (true)
                         if (_5x5 == 3)
                         {
                             _5x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x5 == 4)
                         {
@@ -14312,7 +14390,7 @@ while (true)
                         if (_5x7 == 3)
                         {
                             _5x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x7 == 4)
                         {
@@ -14348,7 +14426,7 @@ while (true)
                         if (_5x9 == 3)
                         {
                             _5x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x9 == 4)
                         {
@@ -14384,7 +14462,7 @@ while (true)
                         if (_5x11 == 3)
                         {
                             _5x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x11 == 4)
                         {
@@ -14420,7 +14498,7 @@ while (true)
                         if (_5x13 == 3)
                         {
                             _5x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x13 == 4)
                         {
@@ -14456,7 +14534,7 @@ while (true)
                         if (_5x15 == 3)
                         {
                             _5x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x15 == 4)
                         {
@@ -14492,7 +14570,7 @@ while (true)
                         if (_5x17 == 3)
                         {
                             _5x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_5x17 == 4)
                         {
@@ -14528,7 +14606,7 @@ while (true)
                         if (_7x1 == 3)
                         {
                             _7x1 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x1 == 4)
                         {
@@ -14564,7 +14642,7 @@ while (true)
                         if (_7x3 == 3)
                         {
                             _7x3 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x3 == 4)
                         {
@@ -14600,7 +14678,7 @@ while (true)
                         if (_7x5 == 3)
                         {
                             _7x5 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x5 == 4)
                         {
@@ -14636,7 +14714,7 @@ while (true)
                         if (_7x7 == 3)
                         {
                             _7x7 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x7 == 4)
                         {
@@ -14672,7 +14750,7 @@ while (true)
                         if (_7x9 == 3)
                         {
                             _7x9 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x9 == 4)
                         {
@@ -14708,7 +14786,7 @@ while (true)
                         if (_7x11 == 3)
                         {
                             _7x11 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x11 == 4)
                         {
@@ -14744,7 +14822,7 @@ while (true)
                         if (_7x13 == 3)
                         {
                             _7x13 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x13 == 4)
                         {
@@ -14780,7 +14858,7 @@ while (true)
                         if (_7x15 == 3)
                         {
                             _7x15 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x15 == 4)
                         {
@@ -14816,7 +14894,7 @@ while (true)
                         if (_7x17 == 3)
                         {
                             _7x17 = 13;
-                            battle = true;
+                            battleprep = true;
                         }
                         else if (_7x17 == 4)
                         {
@@ -14851,15 +14929,17 @@ while (true)
         //https://textart.sh/
 
         Console.Clear();
-        while (battle)
+        while (battleprep)
         {
             enemygen = true;
+            rendermap = false;
+            battle = true;
             break;
         }
+        int enemyranid = 0;
+        int enemyquant = 0;
         while (battle)
         {
-            int enemyranid = 0;
-            int enemyquant = 0;
             Random random = new Random();
             while (enemygen)
             {
@@ -14894,7 +14974,7 @@ while (true)
                     }
                     battlelog[i, 0] = enemyranid;
                     enemyranid--;
-                    for (int j = 1; j < 6; j++)
+                    for (int j = 1; j < 7; j++)
                     {
                         battlelog[i, j] = enemystats[enemyranid, --j];
                         j++;
@@ -14902,105 +14982,247 @@ while (true)
                     i++;
                 }
                 enemygen = false;
-                turn = true;
+                battle = false;
+                save = true;
+                savestate = 6;
+                break;
             }
-
-
+            string status = "";
             while (turn)
             {
                 int turnid = 0;
-                Console.Clear();
-                eventrender = $"\r\n                                                         Enemies:        1. {names[0, battlelog[0, 0]]} | 2. {names[0, battlelog[1, 0]]} | 3. {names[0, battlelog[2, 0]]} | 4. {names[0, battlelog[3, 0]]} " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          $"\r\n                                                                                  {names[0,battlelog[turnid,0]]}                " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        " +
-                          "\r\n                                                                                                                        ";
-                Console.WriteLine("------------------------------------------------------------------------------------------------------------------------" +
-                              $"\r\n  |Health|:{set1} |Gold|:{set2} |Exp|: {set3} " +
-                              "\r\n------------------------------------------------------------------------------------------------------------------------" +
-                              eventrender +
-                              "\r\n------------------------------------------------------------------------------------------------------------------------" +
-                              "\n\r   [A, ◄] Previus  |  [D, ►] Next  |                                                                                " +
-                              "\n\r   [1] Attack      |  [2] Deffence |  [3] Inventory  |  [4] Run                                                     " +
-                              "\n\r------------------------------------------------------------------------------------------------------------------------");
-                switch (Console.ReadKey().Key)
+                int enemyid = battlelog[turnid, 0] - 1;
+                while (playerturn)
                 {
-                    case ConsoleKey.NumPad1:
-                        break;
-                    case ConsoleKey.NumPad2:
-                        break;
-                    case ConsoleKey.NumPad3:
-                        break;
-                    case ConsoleKey.NumPad4:
-                        enemyranid = random.Next(0, 101);
-                        if (3 == enemyquant && enemyranid <= 0)
-                        {
-                            battle = false;
+                    playerturn = true;
+                    Console.Clear();
+                    eventrender = $"\r\n                                                      Enemies:    1. {names[0, battlelog[0, 0]]} | 2. {names[0, battlelog[1, 0]]} | 3. {names[0, battlelog[2, 0]]} | 4. {names[0, battlelog[3, 0]]} " +
+                              "\r\n                                                                                                                        " +
+                             $"\r\n                                                                                   HP: {battlelog[turnid, 1]}/{enemystats[enemyid, 0]}           " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              $"\r\n                                                                                  {names[0, battlelog[turnid, 0]]}       " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              $"\r\n                                                                                                                       " +
+                              $"\r\n                                                                                                                       " +
+                              $"\r\n                                                                                                                       " +
+                              $"\r\n                                                                                                                      ";
+                    Console.WriteLine("------------------------------------------------------------------------------------------------------------------------" +
+                                  $"\r\n  |Health|:{set1} |Gold|:{set2} |Exp|: {set3} " +
+                                  "\r\n------------------------------------------------------------------------------------------------------------------------" +
+                                  eventrender +
+                                  "\r\n------------------------------------------------------------------------------------------------------------------------" +
+                                  "\n\r   [A, ◄] Previus  |  [D, ►] Next  |  [Enter] End Turn  |                                                        " +
+                                  "\n\r   [1] Attack      |  [2] Deffence |  [3] Inventory     |  [4] Run                                                     " +
+                                  "\n\r------------------------------------------------------------------------------------------------------------------------");
+                    switch (Console.ReadKey().Key)
+                    {
+                        case ConsoleKey.NumPad1:
                             break;
-                        }
-                        else if (2 == enemyquant && enemyranid <= 25)
-                        {
-                            battle = false;
+                        case ConsoleKey.NumPad2:
                             break;
-                        }
-                        else if (1 == enemyquant && enemyranid <= 50)
-                        {
-                            battle = false;
+                        case ConsoleKey.NumPad3:
                             break;
-                        }
-                        else if (0 == enemyquant && enemyranid <= 75)
-                        {
-                            battle = false;
+                        case ConsoleKey.NumPad4:
+                            int escapechance = random.Next(0, 101);
+                            if (3 == enemyquant && escapechance <= 0)
+                            {
+                                battle = false;
+                                break;
+                            }
+                            else if (2 == enemyquant && escapechance <= 25)
+                            {
+                                battle = false;
+                                break;
+                            }
+                            else if (1 == enemyquant && escapechance <= 50)
+                            {
+                                battle = false;
+                                break;
+                            }
+                            else if (0 == enemyquant && escapechance <= 75)
+                            {
+                                battle = false;
+                                break;
+                            }
                             break;
-                        }
-                        break;
-                    case ConsoleKey.Enter:
-                        _event = false;
-                        break;
-                    case ConsoleKey.LeftArrow:
-                        chosg2 = 2;
-                        player = false;
-                        break;
-                    case ConsoleKey.RightArrow:
-                        chosg2 = 3;
-                        player = false;
-                        break;
-                    case ConsoleKey.A:
-                        player = false;
-                        chosg2 = 2;
-                        break;
-                    case ConsoleKey.D:
-                        player = false;
-                        chosg2 = 3;
-                        break;
-                        break;
-                    default:
-                        break;
+                        case ConsoleKey.Enter:
+                            playerturn = false;
+                            break;
+                        case ConsoleKey.LeftArrow:
+                            chosg3 = 1;
+                            player = false;
+                            break;
+                        case ConsoleKey.RightArrow:
+                            chosg3 = 2;
+                            player = false;
+                            break;
+                        case ConsoleKey.A:
+                            player = false;
+                            chosg3 = 1;
+                            break;
+                        case ConsoleKey.D:
+                            player = false;
+                            chosg3 = 2;
+                            break;
+                        default:
+                            break;
+                    }
                 }
                 while (battle)
                 {
-                    for (int i = 0; i < 5; i++)
+                    if (turnid == 4 || battlelog[turnid, 0] == 0)
                     {
-                        //battllelog[]
+                        playerturn = true;
+                        break;
                     }
-                    break;
+                    string turnorder = "";
+
+                    if (turnid == 0)
+                    {
+                        turnorder = $"1. {names[0, battlelog[1, 0]]} | 2. {names[0, battlelog[2, 0]]} | 3. {names[0, battlelog[3, 0]]} | 4. Player | 5. {names[0, battlelog[0, 0]]}";
+                    }
+                    else if (turnid == 1)
+                    {
+                        turnorder = $"1. {names[0, battlelog[2, 0]]} | 2. {names[0, battlelog[3, 0]]} | 3. Player | 4. {names[0, battlelog[0, 0]]} | 5. {names[0, battlelog[1, 0]]}";
+                    }
+                    else if (turnid == 2)
+                    {
+                        turnorder = $"1. {names[0, battlelog[3, 0]]} | 2. Player | 3. {names[0, battlelog[0, 0]]} | 4. {names[0, battlelog[1, 0]]} | 5. {names[0, battlelog[2, 0]]}";
+                    }
+                    else if (turnid == 3)
+                    {
+                        turnorder = $"1. Player | 2. {names[0, battlelog[0, 0]]} | 3. {names[0, battlelog[1, 0]]} | 4. {names[0, battlelog[2, 0]]}| 5. {names[0, battlelog[3, 0]]}";
+                    }
+
+                    //defence down
+                    if (battlelog[turnid, 1] > enemystats[enemyid, 0])
+                    {
+                        battlelog[turnid, 1] = enemystats[enemyid, 0];
+                    }
+
+                    //logic
+                    int batlogic1 = 1;
+                    int batlogic2 = 101;
+                    int[] _percentage = new int[6] { ((battlelog[turnid, 1] / enemystats[enemyid, 0]) * 100), 0, 0, 0, 0, 0 };
+
+                    //health
+                    if (_percentage[0] <= 20)
+                    {
+                        batlogic1 = random.Next(19, 25);
+                        batlogic2 = random.Next(50, 60);
+                    }
+                    else if (_percentage[0] >= 21 && _percentage[0] <= 60)
+                    {
+
+                    }
+                    else if (_percentage[0] >= 61)
+                    {
+                        batlogic1 = random.Next(1, 2);
+                        batlogic2 = random.Next(101, 102);
+                    }
+
+                    int enemychose = random.Next(batlogic1, batlogic2);
+                    if (enemychose <= 25)     //attack
+                    {
+                        int chance = random.Next(1, 101);
+                        if (chance <= battlelog[turnid, 3]) //crit
+                        {
+                            set1 = set1 - (battlelog[turnid, 2] * 2);
+                            status = $"{names[0, battlelog[turnid, 0]]} has dealt {(battlelog[turnid, 2] * 2)}";
+                        }
+                        else if (chance >= battlelog[turnid, 3]) //normal
+                        {
+                            set1 = set1 - battlelog[turnid, 2];
+                            status = $"{names[0, battlelog[turnid, 0]]} has dealt {battlelog[turnid, 2]}";
+                        }
+                    }
+                    else if (enemychose == 26) //escape
+                    {
+                        status = $"{names[0, battlelog[turnid, 0]]} has escaped";
+                        for (int j = 0; j < 6; j++)
+                        {
+                            battlelog[turnid, j] = battlelog[turnid, 0];
+                        }
+                    }
+                    else if (enemychose >= 27 && enemychose <= 50)     //armor up or heal
+                    {
+                        if (battlelog[turnid, 1] < enemystats[enemyid, 0])
+                        {
+                            battlelog[turnid, 1] += battlelog[turnid, 6];
+                            if (battlelog[turnid, 1] > enemystats[enemyid, 0])
+                            {
+                                battlelog[turnid, 1] = enemystats[enemyid, 0];
+                            }
+                            status = $"{names[0, battlelog[turnid, 0]]} has heal itself by {battlelog[turnid, 6]}";
+                        }
+                        else
+                        {
+                            battlelog[turnid, 1] = enemystats[enemyid, 0];
+                            battlelog[turnid, 1] += battlelog[turnid, 6];
+                            status = $"{names[0, battlelog[turnid, 0]]} has used defence up +{battlelog[turnid, 6]} ";
+                        }
+                    }
+                    else if (enemychose >= 51 && enemychose <= 75)     //skip turn
+                    {
+                        status = $"{names[0, battlelog[turnid, 0]]} has skipped turn ";
+                    }
+                    else if (enemychose >= 76)     //special effect
+                    {
+                        //pretend that it does smthg
+                        status = $"{names[0, battlelog[turnid, 0]]} has used special effect ";
+                    }
+
+                    if (set1 <= 0)
+                    {
+                        battle = false;
+                        turn = false;
+                    }
+
+                    Console.Clear();
+                    eventrender = $"\r\n                                                   Next:     {turnorder} " +
+                              "\r\n                                                                                                                        " +
+                              $"\r\n                                                                                   HP: {battlelog[turnid, 1]}/{enemystats[enemyid, 0]}           " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              $"\r\n                                                                                  {names[0, battlelog[turnid, 0]]}       " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                        " +
+                              "\r\n                                                                                                                     " +
+                              $"\r\n      {status}                                                          " +
+                              $"\r\n                                                                                                                       " +
+                              $"\r\n\r\n                                                                                                                      ";
+                    Console.WriteLine("------------------------------------------------------------------------------------------------------------------------" +
+                                  $"\r\n  |Health|:{set1} |Gold|:{set2} |Exp|: {set3} " +
+                                  "\r\n------------------------------------------------------------------------------------------------------------------------" +
+                                  eventrender +
+                                  "\r\n------------------------------------------------------------------------------------------------------------------------" +
+                                  "\n\r                                                                                 " +
+                                  "\n\r------------------------------------------------------------------------------------------------------------------------");
+                    turnid++;
+                    System.Threading.Thread.Sleep(2000);
                 }
             }
             break;
