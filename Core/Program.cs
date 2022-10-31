@@ -105,14 +105,14 @@ int[,] battlelog = new int[4, 8];
 
 string[,] names = new string[2, 16] { { "Empty", "Slime", "Skeleton", "Spawner", "Troll", "Tree", "Golem", "", "", "", "", "Mimic", "Boss", "", "", "" }, { "", "Living blob of slime", "Pile of bones that became alive", "Spawner can spawn upto 4 random mobs", "Trolls are usually under bridges idk what he's doing here", "Tree!", "Golems are bulky but can hit like a truck", "", "", "", "", "", "", "", "", "" } };
 
-//weapon 1, dmg, crit chance, special effect id
+//weapon 1, dmg, crit chance, special effect id, emtpy
 // wooden sword, steel sword, 
 //shield 3, defence, durability, effect id, empty
 // wooden shield, steel shield, 
 //armor  2, defence, durability, empty, empty
 //item   4, id, ( effect id, effect id2) empty, empty, empty
 
-int[,,] inventorystats = new int[4, 10, 4] { { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } } };
+int[,,] inventorystats = new int[4, 10, 4] { { { 90, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } }, { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } } };
 
 //first 4 names after that 5-8 descriptions
 string[,,] inventorynames = new string[8, 10, 4] { { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } }, { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } }, { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } }, { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } }, { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } }, { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } }, { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } }, { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } } };
@@ -10750,6 +10750,7 @@ while (true)
                     case ConsoleKey.NumPad4:
                         break;
                     case ConsoleKey.Enter:
+
                         break;
                     case ConsoleKey.Backspace:
                         if (saveinv == 1)
@@ -10822,15 +10823,32 @@ while (true)
                             inventoryrender[i, 3] = "     ";
                             inventoryrender[i, 4] = "     ";
                             inventoryselected[i] = -1;
+                            if (i <= 3)
+                            {
+                                inventoryselected[18] = 1;
+                            }
+                            else if (i >= 4 && i <= 7)
+                            {
+                                inventoryselected[0] = 1;
+                            }
+                            else if (i >= 8 && i <= 17)
+                            {
+                                inventoryselected[4] = 1;
+                            }
+                            else if (i >= 18)
+                            {
+                                inventoryselected[8] = 1;
+                            }
+                            chosg4 = 0;
                         }
                         if (chosg4 == 2)
                         {
-                                inventoryrender[i, 0] = "╔═════╗";
-                                inventoryrender[i, 1] = "║";
-                                inventoryrender[i, 2] = "╚═════╝";
-                                inventoryrender[i, 3] = "     ";
-                                inventoryrender[i, 4] = "     ";
-                                inventoryselected[i] = -1;
+                            inventoryrender[i, 0] = "╔═════╗";
+                            inventoryrender[i, 1] = "║";
+                            inventoryrender[i, 2] = "╚═════╝";
+                            inventoryrender[i, 3] = "     ";
+                            inventoryrender[i, 4] = "     ";
+                            inventoryselected[i] = -1;
                             if (i == 0)
                             {
                                 i = 27;
@@ -10841,20 +10859,42 @@ while (true)
                                 inventoryselected[--i] = 1;
                                 i++;
                             }
-                                chosg4 = 0;
+                            chosg4 = 0;
                         }
                         if (chosg4 == 3)
                         {
-
+                            inventoryrender[i, 0] = "╔═════╗";
+                            inventoryrender[i, 1] = "║";
+                            inventoryrender[i, 2] = "╚═════╝";
+                            inventoryrender[i, 3] = "     ";
+                            inventoryrender[i, 4] = "     ";
+                            inventoryselected[i] = -1;
+                            if (i <= 3)
+                            {
+                                inventoryselected[4] = 1;
+                            }
+                            else if (i >= 4 && i <= 7)
+                            {
+                                inventoryselected[8] = 1;
+                            }
+                            else if (i >= 8 && i <= 17)
+                            {
+                                inventoryselected[18] = 1;
+                            }
+                            else if (i >= 18)
+                            {
+                                inventoryselected[0] = 1;
+                            }
+                            chosg4 = 0;
                         }
                         if (chosg4 == 4)
                         {
-                                inventoryrender[i, 0] = "╔═════╗";
-                                inventoryrender[i, 1] = "║";
-                                inventoryrender[i, 2] = "╚═════╝";
-                                inventoryrender[i, 3] = "     ";
-                                inventoryrender[i, 4] = "     ";
-                                inventoryselected[i] = -1;
+                            inventoryrender[i, 0] = "╔═════╗";
+                            inventoryrender[i, 1] = "║";
+                            inventoryrender[i, 2] = "╚═════╝";
+                            inventoryrender[i, 3] = "     ";
+                            inventoryrender[i, 4] = "     ";
+                            inventoryselected[i] = -1;
                             if (i == 27)
                             {
                                 i = 0;
@@ -10865,7 +10905,7 @@ while (true)
                                 inventoryselected[++i] = 1;
                                 i--;
                             }
-                                chosg4 = 0;
+                            chosg4 = 0;
                         }
                     }
                 }
@@ -15324,10 +15364,29 @@ while (true)
             while (turn)
             {
                 int turnid = 0;
+                if (battlelog[0, 0] == 0 && battlelog[1, 0] == 0 && battlelog[2, 0] == 0 && battlelog[3, 0] == 0)
+                {
+                    turn = false;
+                    battle = false;
+                    playerturn = false;
+                    save = true;
+                    reward = true;
+                    savestate = 5;
+                    break;
+                }
+
                 while (playerturn)
                 {
                     battle = false;
-                    int enemyid = (battlelog[turnid, 0] - 1);
+                    int enemyid = 0;
+                    if (battlelog[turnid, 0] == 0)
+                    {
+
+                    }
+                    else
+                    {
+                        enemyid = (battlelog[turnid, 0] - 1);
+                    }
                     Console.Clear();
                     eventrender = $"\r\n                                                      Enemies:    1. {names[0, battlelog[0, 0]]} | 2. {names[0, battlelog[1, 0]]} | 3. {names[0, battlelog[2, 0]]} | 4. {names[0, battlelog[3, 0]]} " +
                               "\r\n                                                                                                                        " +
@@ -15363,6 +15422,24 @@ while (true)
                     switch (Console.ReadKey().Key)
                     {
                         case ConsoleKey.NumPad1:
+                            if (slot[2] == -1)
+                            {
+                                battlelog[turnid, 1] -= 4;
+                            }
+                            else
+                            {
+                                int critchance = random.Next(1, 101);
+                                if (critchance <= inventorystats[0, slot[2], 1])
+                                {
+                                    battlelog[turnid, 1] -= (inventorystats[0, slot[2], 0] * 2);
+                                }
+                                else
+                                {
+                                    battlelog[turnid, 1] -= inventorystats[0, slot[2], 0];
+                                }
+                            }
+                            playerturn = false;
+                            battle = true;
                             break;
                         case ConsoleKey.NumPad2:
                             break;
@@ -15483,11 +15560,52 @@ while (true)
                 turnid = 0;
                 while (battle)
                 {
-                    int enemyid = battlelog[turnid, 0] - 1;
                     if (turnid == 4 || battlelog[turnid, 0] == 0)
                     {
                         playerturn = true;
                         break;
+                    }
+                    if (battlelog[turnid, 1] <= 0) //dead
+                    {
+                        if (set6 != 0)
+                        {
+                            set2 = (Int32)Math.Ceiling(set2 + (((battlelog[turnid, 4] * (set5 * 0.5)) * set6)));
+                            set3 = (Int32)Math.Ceiling(set3 + (((battlelog[turnid, 5] * (set5 * 0.5)) * set6)));
+                        }
+                        else
+                        {
+                            set2 = (Int32)Math.Ceiling(set2 + ((battlelog[turnid, 4] * (set5 * 0.5))));
+                            set3 = (Int32)Math.Ceiling(set3 + ((battlelog[turnid, 5] * (set5 * 0.5))));
+                        }
+                        set4++;
+
+                        for (int j = 0; j < 8; j++)
+                        {
+                            battlelog[turnid, j] = 0;
+                        }
+                    }
+                    //if (battlelog[0, 0] == 0 || battlelog[1, 0] == 0 || battlelog[2, 0] == 0) // sorting //need fix
+                    //{
+                    //    for (int j = 0; j < 3; j++)
+                    //    {
+                    //        for (int i = 0; i < 8; i++)
+                    //        {
+                    //            battlelog[j, i] = battlelog[++j, i];
+                    //            --j;
+                    //        }
+                    //    }
+                    //    for (int i = 0; i < 8; i++)
+                    //    {
+                    //        battlelog[3, i] = 0;
+                    //    }
+                    //}
+                    int enemyid = 0;
+                    if (battlelog[turnid, 0] == 0)
+                    {
+                    }
+                    else
+                    {
+                        enemyid = battlelog[turnid, 0] - 1;
                     }
                     string turnorder = "";
 
@@ -15553,9 +15671,9 @@ while (true)
                     else if (enemychose == 26) //escape
                     {
                         status = $"{names[0, battlelog[turnid, 0]]} has escaped";
-                        for (int j = 0; j < 6; j++)
+                        for (int j = 0; j < 8; j++)
                         {
-                            battlelog[turnid, j] = battlelog[turnid, 0];
+                            battlelog[turnid, j] = 0;
                         }
                     }
                     else if (enemychose >= 27 && enemychose <= 50)     //armor up or heal
@@ -15626,6 +15744,10 @@ while (true)
                     System.Threading.Thread.Sleep(2000);
                 }
             }
+        }
+        while (reward)
+        {
+            reward = false;
         }
         while (_event)
         {

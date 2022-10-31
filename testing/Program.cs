@@ -158,6 +158,8 @@ Console.WriteLine("ddd{0,15}{0,10}{2,10}{3,10}{4,10}",
   "bla4",
   "bla5");
 
+int h = (Int32)Math.Ceiling(1.5);
+Console.WriteLine(h);
 
 //while (startcell)
 //{
