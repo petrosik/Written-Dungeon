@@ -150,6 +150,9 @@ int _6x5 = 0;
 int _6x7 = 0;
 int _6x9 = 0;
 
+int[,] battlelog = new int[4, 8];
+battlelog[0,0] = 0;
+battlelog[0,1] = 23;
 
 Console.WriteLine("ddd{0,15}{0,10}{2,10}{3,10}{4,10}",
   "bla1",
@@ -157,6 +160,11 @@ Console.WriteLine("ddd{0,15}{0,10}{2,10}{3,10}{4,10}",
   "bla3",
   "bla4",
   "bla5");
+Console.WriteLine(battlelog[0, 1]);
+double percent = (double)battlelog[0, 1]/100;
+Console.WriteLine(percent);
+percent = (((double)battlelog[0, 1]/ 100) * 15);
+    Console.WriteLine(percent);
 
 int h = (Int32)Math.Ceiling(1.5);
 Console.WriteLine(h);
